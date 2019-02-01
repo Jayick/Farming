@@ -1,0 +1,34 @@
+<configs>
+<append xpath="/materials">
+<material id="Mpasture">
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="earth"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="dirt"/>
+	<property name="fertile_level" value="35"/>
+	<property name="stability_glue" value="20"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="MaxDamage" value="250"/>
+	<property name="Experience" value="2"/>
+</material>
+
+<material id="Manimal">
+	<property name="damage_category" value="organic"/>
+	<property name="surface_category" value="organic"/>
+	<property name="particle_category" value="organic"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="leaves"/>
+	<property name="stability_glue" value="0"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Mass" type="int" value="10"/>
+	<property name="MaxDamage" value="250"/>
+	<property name="Experience" value="50"/>
+</material>
+
+<material id="Manimalfeed">
+	<property name="forge_category" value="wood"/>
+	<property name="damage_category" value="organic"/>
+	<property name="surface_category" value="organic"/>
+</material>
+</append>
+</configs>

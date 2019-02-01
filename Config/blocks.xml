@@ -1,0 +1,1335 @@
+<configs>
+	<append xpath="/blocks">
+		<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									PLANTS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+		<!-- SUGAR!!!! THE KOMBUCHA MUSHROOM PEOPLE! SITTING AROUND ALL DAY! WHO CAN BELIEVE YOU! WHO CAN BELIEVE YOU! LET YOUR MOTHER PRAY! SUGAR!-->
+		<block name="Sugar Seedling">
+			<property name="Extends" value="cropsGrowingMaster" />
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="CustomIcon" value="sugarseed" />
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Sugar.unity3d?SugarPrefab1"/>
+			<property name="PlantGrowing.Next" value="Planted Sugar"/>
+			<property name="Group" value="Seeds,All"/>
+			<drop event="Destroy" name="Sugar Seedling" count="1"/>
+		</block>
+		<block name="Planted Sugar">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="DescriptionKey" value="Growing Sugarcane"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="plantedPotato1"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Sugar.unity3d?SugarPrefab2"/>
+			<property name="PlantGrowing.Next" value="Sugarcane"/>
+			<drop event="Destroy" name="Sugar Seedling" count="1"/>
+		</block>
+		<block name="Sugarcane Wild">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Sugar.unity3d?SugarPrefab3"/>
+			<drop event="Harvest" name="Sugarcane Stalk" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="Sugarcane">
+			<property name="Extends" value="Sugarcane Wild"/>
+			<property name="DescriptionKey" value="Sugarcane"/>
+			<property name="CustomIcon" value="1sugar"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Harvest" name="Sugarcane Stalk" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="Sugar Seedling"/>
+		</block>
+		
+		
+		
+		<!-- Wheat -->
+		<block name="Wheat Seedling">
+			<property name="Extends" value="cropsGrowingMaster" />
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="CustomIcon" value="wheatseed" />
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Wheat.unity3d?WheatPrefab1"/>
+			<property name="PlantGrowing.Next" value="Planted Wheat"/>
+			<property name="Group" value="Seeds,All"/>
+			<drop event="Destroy" name="Wheat Seedling" count="1"/>
+		</block>
+		<block name="Planted Wheat">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="DescriptionKey" value="Growing Wheat"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="plantedPotato1"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Wheat.unity3d?WheatPrefab2"/>
+			<property name="PlantGrowing.Next" value="Wheat Grass"/>
+			<drop event="Destroy" name="Wheat Seedling" count="1"/>
+		</block>
+		<block name="Wild Wheat">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Wheat.unity3d?WheatPrefab3"/>
+			<drop event="Harvest" name="Wheat" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="Wheat Grass">
+			<property name="Extends" value="Wild Wheat"/>
+			<property name="DescriptionKey" value="Wheat"/>
+			<property name="CustomIcon" value="1wheat"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Harvest" name="Wheat" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="Wheat Seedling"/>
+		</block>
+		
+		
+		
+		<!-- Sunflower -->
+		<block name="Sunflower Seedling">
+			<property name="Extends" value="cropsGrowingMaster" />
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="CustomIcon" value="sunflowerseed" />
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Sunflower.unity3d?SunflowerPrefab1"/>
+			<property name="PlantGrowing.Next" value="Planted Sunflower"/>
+			<property name="Group" value="Seeds,All"/>
+			<drop event="Destroy" name="Sunflower Seedling" count="1"/>
+		</block>
+		<block name="Planted Sunflower">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="DescriptionKey" value="Growing Sunflower"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="plantedPotato1"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Sunflower.unity3d?SunflowerPrefab2"/>
+			<property name="PlantGrowing.Next" value="Sunflower"/>
+			<drop event="Destroy" name="Sunflower Seedling" count="1"/>
+		</block>
+		<block name="Wild Sunflower">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Sunflower.unity3d?SunflowerPrefab3"/>
+			<drop event="Harvest" name="Sunflower Seed" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="Sunflower">
+			<property name="Extends" value="Wild Sunflower"/>
+			<property name="DescriptionKey" value="Sunflower Plant"/>
+			<property name="CustomIcon" value="1sunflower"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Harvest" name="Sunflower Seed" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="Sunflower Seedling"/>
+		</block>
+		
+		
+		
+		<!-- Pot -->
+		<block name="Marijuana Seedling">
+			<property name="Extends" value="cropsGrowingMaster" />
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="CustomIcon" value="potseed" />
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Pot.unity3d?PotPrefab1"/>
+			<property name="PlantGrowing.Next" value="Planted Marijuana"/>
+			<property name="Group" value="Seeds,All"/>
+			<drop event="Destroy" name="Marijuana Seedling" count="1"/>
+		</block>
+		<block name="Planted Marijuana">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="DescriptionKey" value="Growing Marijuana"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="plantedPotato1"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Pot.unity3d?PotPrefab2"/>
+			<property name="PlantGrowing.Next" value="Marijuana"/>
+			<drop event="Destroy" name="Marijuana Seedling" count="1"/>
+		</block>
+		<block name="Wild Marijuana">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Pot.unity3d?PotPrefab3"/>
+			<drop event="Harvest" name="Marijuana Seed" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="Marijuana">
+			<property name="Extends" value="Wild Marijuana"/>
+			<property name="DescriptionKey" value="Marijuana"/>
+			<property name="CustomIcon" value="1pot"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Harvest" name="Hemp" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="Marijuana Seedling"/>
+		</block>
+		
+		
+		
+		<!-- Tomato -->
+		<block name="Tomato Seedling">
+			<property name="Extends" value="cropsGrowingMaster" />
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="CustomIcon" value="tomatoseed" />
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Tomato.unity3d?TomatoPrefab1"/>
+			<property name="PlantGrowing.Next" value="Planted Tomato"/>
+			<property name="Group" value="Seeds,All"/>
+			<drop event="Destroy" name="Tomato Seedling" count="1"/>
+		</block>
+		<block name="Planted Tomato">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="DescriptionKey" value="Growing Tomato"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="plantedPotato1"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Tomato.unity3d?TomatoPrefab2"/>
+			<property name="PlantGrowing.Next" value="Tomato"/>
+			<drop event="Destroy" name="Tomato Seedling" count="1"/>
+		</block>
+		<block name="Wild Tomato">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Tomato.unity3d?TomatoPrefab3"/>
+			<drop event="Harvest" name="Tomatoes" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="Tomato">
+			<property name="Extends" value="Wild Tomato"/>
+			<property name="DescriptionKey" value="Tomato Plant"/>
+			<property name="CustomIcon" value="1tomato"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Harvest" name="Tomatoes" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="Tomato Seedling"/>
+		</block>
+		
+		
+		
+		<!-- Jalapeno -->
+		<block name="Jalapeno Seedling">
+			<property name="Extends" value="cropsGrowingMaster" />
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="CustomIcon" value="jalaseed" />
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Jalapeno.unity3d?JalapenoPrefab1"/>
+			<property name="PlantGrowing.Next" value="Planted Jalapeno"/>
+			<property name="Group" value="Seeds,All"/>
+			<drop event="Destroy" name="Jalapeno Seedling" count="1"/>
+		</block>
+		<block name="Planted Jalapeno">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="DescriptionKey" value="Growing Jalapeno"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="plantedPotato1"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Jalapeno.unity3d?JalapenoPrefab2"/>
+			<property name="PlantGrowing.Next" value="Jalapeno"/>
+			<drop event="Destroy" name="Jalapeno Seedling" count="1"/>
+		</block>
+		<block name="Wild Jalapeno">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Jalapeno.unity3d?JalapenoPrefab3"/>
+			<drop event="Harvest" name="Jalapeno Pepper" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="Jalapeno">
+			<property name="Extends" value="Wild Jalapeno"/>
+			<property name="DescriptionKey" value="Jalapeno Plant"/>
+			<property name="CustomIcon" value="1jala"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Harvest" name="Jalapeno Pepper" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="Jalapeno Seedling"/>
+		</block>
+		
+		
+		
+		<!-- Flax -->
+		<block name="Flax Seedling">
+			<property name="Extends" value="cropsGrowingMaster" />
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="CustomIcon" value="flaxseed" />
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Flax.unity3d?FlaxPrefab1"/>
+			<property name="PlantGrowing.Next" value="Planted Flax"/>
+			<property name="Group" value="Seeds,All"/>
+			<drop event="Destroy" name="Flax Seedling" count="1"/>
+		</block>
+		<block name="Planted Flax">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="DescriptionKey" value="Growing Flax"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="plantedPotato1"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Flax.unity3d?FlaxPrefab2"/>
+			<property name="PlantGrowing.Next" value="Flax"/>
+			<drop event="Destroy" name="Flax Seedling" count="1"/>
+		</block>
+		<block name="Wild Flax">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Flax.unity3d?FlaxPrefab3"/>
+			<drop event="Harvest" name="Flax Fiber" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="Flax">
+			<property name="Extends" value="Wild Flax"/>
+			<property name="DescriptionKey" value="Flax Plant"/>
+			<property name="CustomIcon" value="1flax"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Harvest" name="Flax Fiber" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="Flax Seedling"/>
+		</block>
+		
+		
+		
+		<!-- Grape -->
+		<block name="Grape Seedling">
+			<property name="Extends" value="cropsGrowingMaster" />
+			<property name="PlantGrowing.GrowthRate" value="126.0"/>
+			<property name="CustomIcon" value="grapeseed" />
+			<property name="CreativeMode" value="Player"/>
+			<property name="BigDecorationRadius" value="3"/>
+			<property name="MaxDamage" value="200"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/GrapeTree.unity3d?GrapeTreePrefab2"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,3,3"/>
+			<property name="Collide" value="melee,movement"/>
+			<property name="PlantGrowing.Next" value="Grape Tree"/>
+			<property name="Group" value="Seeds,All"/>
+			<drop event="Destroy" name="Grape Seedling" count="1"/>
+		</block>
+		<block name="Wild Grape Tree">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/GrapeTree.unity3d?GrapeTreePrefab3"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,3,3"/>
+			<property name="BigDecorationRadius" value="3"/>
+			<property name="Collide" value="melee,movement"/>
+			<drop event="Harvest" name="Grapes" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="Grape Tree">
+			<property name="Extends" value="Wild Grape Tree"/>
+			<property name="DescriptionKey" value="Grape Tree"/>
+			<property name="CustomIcon" value="1grapetree"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Harvest" name="Grapes" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="Grape Seedling"/>
+		</block>
+		
+		
+		
+		<!-- Strawberry -->
+		<block name="Strawberry Seedling">
+			<property name="Extends" value="cropsGrowingMaster" />
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="CustomIcon" value="strawberryseed" />
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Strawberry.unity3d?StrawberryPrefab1"/>
+			<property name="PlantGrowing.Next" value="Planted Strawberry"/>
+			<property name="Group" value="Seeds,All"/>
+			<drop event="Destroy" name="Strawberry Seedling" count="1"/>
+		</block>
+		<block name="Planted Strawberry">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="DescriptionKey" value="Growing Strawberry"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="plantedPotato1"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Strawberry.unity3d?StrawberryPrefab2"/>
+			<property name="PlantGrowing.Next" value="Strawberry Bush"/>
+			<drop event="Destroy" name="Strawberry Seedling" count="1"/>
+		</block>
+		<block name="Wild Strawberry">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Strawberry.unity3d?StrawberryPrefab3"/>
+			<drop event="Harvest" name="Strawberries" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="Strawberry Bush">
+			<property name="Extends" value="Wild Strawberry"/>
+			<property name="DescriptionKey" value="Strawberry Bush"/>
+			<property name="CustomIcon" value="1strawberry"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Harvest" name="Strawberries" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="Strawberry Seedling"/>
+		</block>
+		
+		
+		
+		<!-- Herb1 -->
+		<block name="Herb Seedling">
+			<property name="Extends" value="cropsGrowingMaster" />
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="CustomIcon" value="herb1seed" />
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Herb1.unity3d?Herb1Prefab1"/>
+			<property name="PlantGrowing.Next" value="Planted Herb"/>
+			<property name="Group" value="Seeds,All"/>
+			<drop event="Destroy" name="Herb Seedling" count="1"/>
+		</block>
+		<block name="Planted Herb">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="plantedPotato1"/>
+			<property name="DescriptionKey" value="Growing Herb"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Herb1.unity3d?Herb1Prefab2"/>
+			<property name="PlantGrowing.Next" value="Herb Bush"/>
+			<drop event="Destroy" name="Herb Seedling" count="1"/>
+		</block>
+		<block name="Wild Herb">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Herb1.unity3d?Herb1Prefab3"/>
+			<drop event="Harvest" name="Herbs" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="Herb Bush">
+			<property name="Extends" value="Wild Herb"/>
+			<property name="DescriptionKey" value="Herb Bush"/>
+			<property name="CustomIcon" value="1herb1"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Harvest" name="Herbs" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="Herb Seedling"/>
+		</block>
+		
+		
+		
+		<!-- Spice -->
+		<block name="Spice Seedling">
+			<property name="Extends" value="cropsGrowingMaster" />
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="CustomIcon" value="spiceseed" />
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Spice.unity3d?SpicePrefab1"/>
+			<property name="PlantGrowing.Next" value="Planted Spice"/>
+			<property name="Group" value="Seeds,All"/>
+			<drop event="Destroy" name="Spice Seedling" count="1"/>
+		</block>
+		<block name="Planted Spice">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="plantedPotato1"/>
+			<property name="DescriptionKey" value="Growing Spice"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Spice.unity3d?SpicePrefab2"/>
+			<property name="PlantGrowing.Next" value="Spice Bush"/>
+			<drop event="Destroy" name="Spice Seedling" count="1"/>
+		</block>
+		<block name="Wild Spice">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Spice.unity3d?SpicePrefab3"/>
+			<drop event="Harvest" name="Spices" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="Spice Bush">
+			<property name="Extends" value="Wild Spice"/>
+			<property name="DescriptionKey" value="Spice Bush"/>
+			<property name="CustomIcon" value="1Spice"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Harvest" name="Spices" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="Spice Seedling"/>
+		</block>
+		
+		
+		
+		<!-- Rice -->
+		<block name="Rice Seedling">
+			<property name="Extends" value="cropsGrowingMaster" />
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="CustomIcon" value="riceseed" />
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Rice.unity3d?RicePrefab1"/>
+			<property name="PlantGrowing.Next" value="Planted Rice"/>
+			<property name="Group" value="Seeds,All"/>
+			<drop event="Destroy" name="Rice Seedling" count="1"/>
+		</block>
+		<block name="Planted Rice">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="plantedPotato1"/>
+			<property name="DescriptionKey" value="Growing Rice"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Rice.unity3d?RicePrefab2"/>
+			<property name="PlantGrowing.Next" value="Rice Bush"/>
+			<drop event="Destroy" name="Rice Seedling" count="1"/>
+		</block>
+		<block name="Wild Rice">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Rice.unity3d?RicePrefab3"/>
+			<drop event="Harvest" name="Rice" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="Rice Bush">
+			<property name="Extends" value="Wild Rice"/>
+			<property name="DescriptionKey" value="Rice"/>
+			<property name="CustomIcon" value="1rice"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Harvest" name="Rice" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="Rice Seedling"/>
+		</block>
+		<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									TREES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+		<!-- Apple Tree -->
+		<block name="Apple Sapling">
+			<property name="Extends" value="treeMasterGrowing" param1="CustomIcon,DescriptionKey"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="appleseed"/>
+			<property name="MaxDamage" value="40"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="MaxDamage" value="10"/>
+			<property name="Material" value="Mplants"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Model" value="#@modfolder:Resources/AppleTree.unity3d?AppleTreePrefab1"/>
+			<property name="IsDistantDecoration" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Mesh" value="models"/>
+			<property name="Collide" value="melee,movement"/>
+			<property name="FallOver" value="false"/>
+			<property name="BigDecorationRadius" value="3"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="PlantGrowing.Next" value="Apple Tree2"/>
+			<drop event="Destroy" name="Apple Sapling" count="1"/>
+			<property name="EconomicValue" value="12"/>
+			<property name="EconomicBundleSize" value="5"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Seeds,All"/>
+			<property name="ParticleOnDeath" value="treeGib_sapling"/>
+			<property name="ActivationDistance" value="4"/>
+		</block>
+		<block name="Apple Tree2">
+			<property name="Extends" value="treeMasterGrowing"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="MaxDamage" value="200"/>
+			<property name="Collide" value="melee,movement"/>
+			<property name="CustomIcon" value="treeOakSml01"/>
+			<property name="Model" value="#@modfolder:Resources/AppleTree.unity3d?AppleTreePrefab2"/>
+			<property name="IsDistantDecoration" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Mesh" value="models"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,7,1"/>
+			<property name="BigDecorationRadius" value="3"/>
+			<property name="PlantGrowing.Next" value="Apple Tree"/>
+			<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+			<drop event="Destroy" name="Apples" count="10"/>
+		</block>
+		<block name="Apple Tree">
+			<property name="Extends" value="Apple Tree2"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Collide" value="melee,movement"/>
+			<property name="Material" value="MtreeWoodFull"/>
+			<property name="MaxDamage" value="400"/>
+			<property name="CustomIcon" value="1appletree"/>
+			<property name="Model" value="#@modfolder:Resources/AppleTree.unity3d?AppleTreePrefab3"/>
+			<property name="IsDistantDecoration" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Mesh" value="models"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,6,1"/>
+			<property name="PlantGrowing.FertileLevel" value="5"/>
+			<drop event="Harvest" name="resourceWood" count="60" tag="oreWoodHarvest"/>
+			<drop event="Destroy" name="Apples" count="20"/>
+			<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+		</block>
+		
+		<!-- Nut Tree -->
+		<block name="Nut Tree Sapling">
+			<property name="Extends" value="treeMasterGrowing" param1="CustomIcon,DescriptionKey"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="Nutseed"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="MaxDamage" value="10"/>
+			<property name="Material" value="Mplants"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Model" value="#@modfolder:Resources/NutTree.unity3d?NutTreePrefab1"/>
+			<property name="IsDistantDecoration" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Mesh" value="models"/>
+			<property name="Collide" value="melee,movement"/>
+			<property name="FallOver" value="false"/>
+			<property name="BigDecorationRadius" value="2"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="PlantGrowing.Next" value="Nut Tree2"/>
+			<drop event="Destroy" name="Nut Sapling" count="1"/>
+			<property name="EconomicValue" value="12"/>
+			<property name="EconomicBundleSize" value="5"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Seeds,All"/>
+			<property name="ParticleOnDeath" value="treeGib_sapling"/>
+			<property name="ActivationDistance" value="4"/>
+		</block>
+		<block name="Nut Tree2">
+			<property name="Extends" value="treeMasterGrowing"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="MaxDamage" value="20"/>
+			<property name="Collide" value="melee,movement"/>
+			<property name="CustomIcon" value="treeOakSml01"/>
+			<property name="Model" value="#@modfolder:Resources/NutTree.unity3d?NutTreePrefab2"/>
+			<property name="IsDistantDecoration" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Mesh" value="models"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="BigDecorationRadius" value="2"/>
+			<property name="PlantGrowing.Next" value="Nut Tree"/>
+			<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+			<drop event="Destroy" name="Nuts" count="10"/>
+		</block>
+		<block name="Nut Tree">
+			<property name="Extends" value="Nut Tree2"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Collide" value="melee,movement"/>
+			<property name="Material" value="MtreeWoodFull"/>
+			<property name="MaxDamage" value="50"/>
+			<property name="CustomIcon" value="1Nuttree"/>
+			<property name="Model" value="#@modfolder:Resources/NutTree.unity3d?NutTreePrefab3"/>
+			<property name="IsDistantDecoration" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Mesh" value="models"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="PlantGrowing.FertileLevel" value="5"/>
+			<drop event="Harvest" name="resourceWood" count="10" tag="oreWoodHarvest"/>
+			<drop event="Destroy" name="Nuts" count="20"/>
+			<property name="ParticleOnDeath" value="treeGib_burnt_55m"/>
+		</block>
+		<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									"LIVE" Animals
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+		<!-- Cow -->
+		<block name="Calfling">
+			<property name="Extends" value="cropsGrowingMaster" />
+			<property name="PlantGrowing.GrowthRate" value="157.5"/>
+			<property name="PlantGrowing.FertileLevel" value="30"/>
+			<property name="Material" value="Manimal"/>
+			<property name="CustomIcon" value="calf" />
+			<property name="MaxDamage" value="1"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="BigDecorationRadius" value="3"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="3,2,3"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/CattlePlant.unity3d?CattlePlantPrefab1"/>
+			<property name="Collide" value="melee,movement"/>
+			<property name="PlantGrowing.Next" value="Ifyounameityoucantkillit"/>
+			<property name="Group" value="Breeding,All"/>
+			<drop event="Destroy" name="Raw Beef" count="10"/>
+		</block>
+		<block name="Ifyounameityoucantkillit">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="PlantGrowing.GrowthRate" value="157.5"/>
+			<property name="PlantGrowing.FertileLevel" value="30"/>
+			<property name="DescriptionKey" value="Young Bull"/>
+			<property name="MaxDamage" value="1"/>
+			<property name="Material" value="Manimal"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="plantedPotato1"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/CattlePlant.unity3d?CattlePlantPrefab2"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="3,2,3"/>
+			<property name="BigDecorationRadius" value="3"/>
+			<property name="Collide" value="melee,movement"/>
+			<property name="PlantGrowing.Next" value="Cattle"/>
+			<drop event="Destroy" name="Raw Beef" count="20"/>
+		</block>
+		<block name="Wild Cattle">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Material" value="Manimal"/>
+			<property name="Model" value="#@modfolder:Resources/CattlePlant.unity3d?CattlePlantPrefab3"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="3,2,3"/>
+			<property name="BigDecorationRadius" value="3"/>
+			<property name="Collide" value="melee,movement"/>
+			<drop event="Harvest" name="Raw Beef" count="30" tag="wildCropsHarvest"/>
+		</block>
+		<block name="Cattle">
+			<property name="Extends" value="Wild Cattle"/>
+			<property name="DescriptionKey" value="Cattle"/>
+			<property name="HeatMapStrength" value="5"/>
+			<property name="HeatMapTime" value="1200"/>
+			<property name="HeatMapFrequency" value="25"/>
+			<property name="MaxDamage" value="1"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="3,2,3"/>
+			<property name="Material" value="Manimal"/>
+			<property name="CustomIcon" value="cattleplant"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Harvest" name="Raw Beef" count="40" tag="wildCropsHarvest,butcherHarvest"/>
+		</block>
+		
+		<!-- PIG -->
+		<block name="Piglet">
+			<property name="Extends" value="cropsGrowingMaster" />
+			<property name="Material" value="Manimal"/>
+			<property name="PlantGrowing.GrowthRate" value="94.5"/>
+			<property name="PlantGrowing.FertileLevel" value="30"/>
+			<property name="MaxDamage" value="1"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,2,2"/>
+			<property name="CustomIcon" value="sow" />
+			<property name="CreativeMode" value="Player"/>
+			<property name="BigDecorationRadius" value="3"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/PigPlant.unity3d?PigPlantPrefab1"/>
+			<property name="Collide" value="melee,movement"/>
+			<property name="PlantGrowing.Next" value="Pig2"/>
+			<property name="Group" value="Breeding,All"/>
+			<drop event="Destroy" name="Raw Pork" count="5"/>
+		</block>
+		<block name="Pig2">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="Material" value="Manimal"/>
+			<property name="DescriptionKey" value="Young Pig"/>
+			<property name="PlantGrowing.GrowthRate" value="94.5"/>
+			<property name="PlantGrowing.FertileLevel" value="30"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="plantedPotato1"/>
+			<property name="MaxDamage" value="1"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/PigPlant.unity3d?PigPlantPrefab2"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,2,2"/>
+			<property name="BigDecorationRadius" value="3"/>
+			<property name="Collide" value="melee,movement"/>
+			<property name="PlantGrowing.Next" value="Amy Schumer"/>
+			<drop event="Destroy" name="Raw Pork" count="10"/>
+		</block>
+		<block name="Wild Pig">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Material" value="Manimal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/PigPlant.unity3d?PigPlantPrefab3"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,2,2"/>
+			<property name="BigDecorationRadius" value="3"/>
+			<property name="Collide" value="melee,movement"/>
+			<drop event="Harvest" name="Raw Pork" count="15" tag="wildCropsHarvest"/>
+		</block>
+		<block name="Amy Schumer">
+			<property name="Extends" value="Wild Pig"/>
+			<property name="DescriptionKey" value="Full Grown Pig"/>
+			<property name="HeatMapStrength" value="5"/>
+			<property name="HeatMapTime" value="1200"/>
+			<property name="HeatMapFrequency" value="25"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,2,2"/>
+			<property name="MaxDamage" value="1"/>
+			<property name="Material" value="Manimal"/>
+			<property name="CustomIcon" value="pigplant"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Harvest" name="Raw Pork" count="20" tag="cropHarvest,butcherHarvest"/>
+		</block>
+		
+		<!-- Chicken -->
+		<block name="Fertile Egg">
+			<property name="Extends" value="cropsGrowingMaster" />
+			<property name="Material" value="Manimal"/>
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="PlantGrowing.FertileLevel" value="30"/>
+			<property name="MaxDamage" value="1"/>
+			<property name="CustomIcon" value="fertegg"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/ChickenPlant.unity3d?ChickenPlantPrefab1"/>
+			<property name="Collide" value="melee,movement"/>
+			<property name="PlantGrowing.Next" value="Baby Chick"/>
+			<property name="Group" value="Breeding"/>
+			<drop event="Destroy" name="Raw Chicken" count="1"/>
+		</block>
+		<block name="Baby Chick">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="Material" value="Manimal"/>
+			<property name="DescriptionKey" value="Baby Chick"/>
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="PlantGrowing.FertileLevel" value="30"/>
+			<property name="MaxDamage" value="1"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="plantedPotato1"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/ChickenPlant.unity3d?ChickenPlantPrefab2"/>
+			<property name="Collide" value="melee,movement"/>
+			<property name="PlantGrowing.Next" value="Mature Chicken"/>
+			<drop event="Destroy" name="Raw Chicken" count="2"/>
+		</block>
+		<block name="Wild Chicken">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Material" value="Manimal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/ChickenPlant.unity3d?ChickenPlantPrefab3"/>
+			<property name="Collide" value="melee,movement"/>
+			<drop event="Harvest" name="Raw Chicken" count="5" tag="wildCropsHarvest"/>
+		</block>
+		<block name="Mature Chicken">
+			<property name="Extends" value="Wild Chicken"/>
+			<property name="MaxDamage" value="1"/>
+			<property name="DescriptionKey" value="Mature Chicken"/>
+			<property name="HeatMapStrength" value="5"/>
+			<property name="HeatMapTime" value="1200"/>
+			<property name="HeatMapFrequency" value="25"/>
+			<property name="Material" value="Manimal"/>
+			<property name="CustomIcon" value="chickenplant"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Harvest" name="Raw Chicken" count="5" tag="cropHarvest,butcherHarvest"/>
+		</block>
+		<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									BLOCKS/FERTILIZER
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+		<block name="Well">
+			<property name="Material" value="Mstone"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="CustomIcon" value="well"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#@modfolder:Resources/Well.unity3d?WellPrefab"/>
+			<property name="DisplayType" value="blockMulti" />
+			<property name="MultiBlockDim" value="2,3,2"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Group" value="Workbenches,All"/>
+			<property name="Count" value="80000"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceScrapPolymers" count="2,6" tag="salvageHarvest"/>
+			<drop event="Destroy" name="resourceScrapIron" count="1,8"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="FilterTags" value="floot,ffurniture,fdecor,fother"/>
+		</block>
+		<block name="Animal Bedding">
+			<property name="Class" value="Hay"/>
+			<property name="Material" value="Mhay"/>
+			<property name="CustomIcon" value="animalbedding"/>
+			<property name="DescriptionKey" value="Test 1 2 Test 1 2 3 Test"/>
+			<property name="Group" value="Animals,All"/>
+			<property name="Texture" value="196"/>
+			<property name="FuelValue" value="8"/>
+			<property name="CanPickup" value="true"/>
+			<property name="FallDamage" value=".5"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="Fertile Bedding"/>
+				<property name="Item" value="Pitchfork"/>
+				<property name="ItemCount" value="0"/>
+				<property name="UpgradeHitCount" value="1"/></property>
+			<property class="RepairItems">
+				<property name="resourceYuccaFibers" value="10"/></property>
+			<drop event="Destroy" name="Animal Bedding" count="1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="EconomicBundleSize" value="20"/>
+			<property name="FilterTags" value="fbuilding,fdecor,fother"/>
+			<property name="SortOrder1" value="70r2"/>
+		</block>
+		<block name="Fertile Bedding">
+			<property name="Class" value="Hay"/>
+			<property name="Material" value="Mpasture"/>
+			<property name="Group" value="Animals,All"/>
+			<property name="CustomIcon" value="farmland"/>
+			<property name="Texture" value="196"/>
+			<property class="RepairItems">
+				<property name="resourceYuccaFibers" value="10"/></property>
+			<drop event="Destroy" name="Animal Bedding" count="1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="EconomicBundleSize" value="20"/>
+			<property name="FilterTags" value="fbuilding,fdecor,fother"/>
+			<property name="SortOrder1" value="70r2"/>
+		</block>
+		<block name="Fertile Animal Ground">
+			<property name="Material" value="Mpasture"/>
+			<property name="Shape" value="Terrain"/>
+			<property name="Mesh" value="terrain"/>
+			<property name="Group" value="Animals,All"/>
+			<property name="CustomIcon" value="farmland"/>
+			<property name="CustomIconTint" value="ffffff"/>
+			<property name="Texture" value="290,2,2,2,2,2"/>
+			<property name="ImposterExclude" value="true"/>
+			<property name="CanMobsSpawnOn" value="false"/>
+			<property class="RepairItems">
+				<property name="resourceYuccaFibers" value="10"/></property>
+			<drop event="Destroy" name="Animal Bedding" count="1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="EconomicBundleSize" value="20"/>
+			<property name="DisplayType" value="blockTerrainFertile" />
+		</block>
+		<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									CRAFT STATIONS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+		<block name="Farm Table">
+			<property name="Class" value="Workstation"/>
+			<property name="CustomIcon" value="farmtable"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="MaxDamage" value="800"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/FarmTable.unity3d?FarmTablePrefab"/>
+			<property name="DisplayType" value="blockMulti" />
+			<property name="MultiBlockDim" value="2,2,1"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="HeatMapStrength" value="0"/>
+			<property name="HeatMapTime" value="1200"/>
+			<property name="HeatMapFrequency" value="25"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Workstation">
+				<property name="Modules" value="output"/>
+				<property name="CraftingAreaRecipes" value="Farm Table"/></property>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench" />
+			<property name="OpenSound" value="open_workbench" />
+			<property name="CloseSound" value="close_workbench" />
+			<property name="WorkstationJournalTip" value="workbenchTip" />
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="25"/>
+				<property name="resourceMechanicalParts" value="20"/>
+				<property name="resourceWood" value="50"/></property>
+			<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="DescriptionKey" value="Crop workbench for crafting seeds!"/>
+			<property name="EconomicValue" value="776"/>
+			<property name="Group" value="Building,Science"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+			<property name="SortOrder1" value="70i0"/>
+		</block>
+		<block name="Dairy Churn">
+			<property name="Class" value="Workstation"/>
+			<property name="CustomIcon" value="butterchurn"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="MaxDamage" value="800"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/ButterChurn.unity3d?ButterChurnPrefab"/>
+			<property name="DisplayType" value="blockMulti" />
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="HeatMapStrength" value="0"/>
+			<property name="HeatMapTime" value="1200"/>
+			<property name="HeatMapFrequency" value="25"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Workstation">
+				<property name="Modules" value="output"/>
+				<property name="CraftingAreaRecipes" value="Dairy Churn"/></property>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench" />
+			<property name="OpenSound" value="open_workbench" />
+			<property name="CloseSound" value="close_workbench" />
+			<property name="WorkstationJournalTip" value="workbenchTip" />
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="25"/>
+				<property name="resourceMechanicalParts" value="20"/>
+				<property name="resourceWood" value="50"/></property>
+			<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="DescriptionKey" value="Dairy Churn for processing dairy!"/>
+			<property name="EconomicValue" value="776"/>
+			<property name="Group" value="Workbenches,All"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+			<property name="SortOrder1" value="70i0"/>
+		</block>
+		<block name="Wine Cask">
+			<property name="Class" value="Workstation"/>
+			<property name="CustomIcon" value="cask"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="MaxDamage" value="800"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Cask.unity3d?CaskPrefab"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="HeatMapStrength" value="0"/>
+			<property name="HeatMapTime" value="1200"/>
+			<property name="HeatMapFrequency" value="25"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Workstation">
+				<property name="Modules" value="output"/>
+				<property name="CraftingAreaRecipes" value="Wine Cask"/></property>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench" />
+			<property name="OpenSound" value="open_workbench" />
+			<property name="CloseSound" value="close_workbench" />
+			<property name="WorkstationJournalTip" value="workbenchTip" />
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="25"/>
+				<property name="resourceMechanicalParts" value="20"/>
+				<property name="resourceWood" value="50"/></property>
+			<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="DescriptionKey" value="Dairy Churn for processing dairy!"/>
+			<property name="EconomicValue" value="776"/>
+			<property name="Group" value="Workbenches,All"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+			<property name="SortOrder1" value="70i0"/>
+		</block>
+		<block name="Butcher Table">
+			<property name="CustomIcon" value="butchertable"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/ButcherTable.unity3d?ButcherTablePrefab"/>
+			<property name="FilterTags" value="floot,ffurniture"/>
+			<property name="Path" value="solid"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,2,3"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="Mwood"/>
+			<property name="MaxDamage" value="300"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="HeatMapStrength" value="10"/>
+			<property name="HeatMapTime" value="1200"/>
+			<property name="HeatMapFrequency" value="25"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Workstation">
+				<property name="Modules" value="output"/>
+				<property name="CraftingAreaRecipes" value="Butcher Table"/></property>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench" />
+			<property name="OpenSound" value="butcheropen" />
+			<property name="CloseSound" value="butcheropen" />
+			<property name="CraftSound" value="butchercraft" />
+			<property name="WorkstationJournalTip" value="workbenchTip" />
+			<property class="RepairItems">
+				<property name="resourceWood" value="5"/>
+				<property name="resourceFeather" value="5"/></property>
+			<drop event="Harvest" name="resourceCloth" count="1" prob="0.3" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceFeather" count="3" prob="0.35" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceFeather" count="2" prob="0.6" tag="allHarvest"/>
+			<drop event="Destroy" name="resourceYuccaFibers" count="2,8"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="DescriptionKey" value="Feed the pig and get meat!"/>
+			<property name="EconomicValue" value="776"/>
+			<property name="Group" value="Workbenches,All"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+		</block>
+		<block name="Grain Processor">
+			<property name="CustomIcon" value="grinder"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Grinder.unity3d?GrinderPrefab"/>
+			<property name="FilterTags" value="floot,ffurniture"/>
+			<property name="Path" value="solid"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="Mwood"/>
+			<property name="MaxDamage" value="300"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="HeatMapStrength" value="0"/>
+			<property name="HeatMapTime" value="1200"/>
+			<property name="HeatMapFrequency" value="25"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Workstation">
+				<property name="Modules" value="output"/>
+				<property name="CraftingAreaRecipes" value="Grain Processor"/></property>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench" />
+			<property name="OpenSound" value="grindopen" />
+			<property name="CloseSound" value="grindclose" />
+			<property name="CraftSound" value="grindcraft" />
+			<property name="WorkstationJournalTip" value="workbenchTip" />
+			<property class="RepairItems">
+				<property name="resourceWood" value="5"/>
+				<property name="resourceFeather" value="5"/></property>
+			<drop event="Harvest" name="resourceCloth" count="1" prob="0.3" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceFeather" count="3" prob="0.35" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceFeather" count="2" prob="0.6" tag="allHarvest"/>
+			<drop event="Destroy" name="resourceYuccaFibers" count="2,8"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="DescriptionKey" value="Feed the pig and get meat!"/>
+			<property name="EconomicValue" value="776"/>
+			<property name="Group" value="Workbenches,All"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+		</block>
+		<block name="Smoker">
+			<property name="CustomIcon" value="smoker"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Smoker.unity3d?SmokerPrefab"/>
+			<property name="FilterTags" value="floot,ffurniture"/>
+			<property name="Path" value="solid"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="Msteel"/>
+			<property name="MaxDamage" value="300"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="ParticleName" value="campfire"/>
+			<property name="ParticleOffset" value="1,2.4,.6"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="HeatMapStrength" value="8"/>
+			<property name="HeatMapTime" value="1200"/>
+			<property name="HeatMapFrequency" value="25"/>
+			<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
+			<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Workstation">
+				<property name="Modules" value="tools,output,fuel,input"/>
+				<property name="Collide" value="melee,bullet,arrow,rocket"/>
+				<property name="CraftingAreaRecipes" value="Smoker"/>
+		</property>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench" />
+			<property name="OpenSound" value="cookopen" />
+			<property name="CloseSound" value="cookclose" />
+			<property name="CraftSound" value="cookcraft" />
+			<property name="WorkstationJournalTip" value="workbenchTip" />
+			<property class="RepairItems">
+				<property name="resourceWood" value="5"/>
+				<property name="resourceFeather" value="5"/></property>
+			<drop event="Harvest" name="resourceCloth" count="1" prob="0.3" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceFeather" count="3" prob="0.35" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceFeather" count="2" prob="0.6" tag="allHarvest"/>
+			<drop event="Destroy" name="resourceYuccaFibers" count="2,8"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="DescriptionKey" value="Feed the pig and get meat!"/>
+			<property name="EconomicValue" value="776"/>
+			<property name="Group" value="Workbenches,All"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+		</block>
+		<block name="Grill">
+			<property name="CustomIcon" value="oven"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Oven.unity3d?OvenPrefab"/>
+			<property name="FilterTags" value="floot,ffurniture"/>
+			<property name="Path" value="solid"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,2,2"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="Msteel"/>
+			<property name="MaxDamage" value="300"/>
+			<property name="ParticleName" value="campfire"/>
+			<property name="ParticleOffset" value=".45,1.3,.1"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="HeatMapStrength" value="8"/>
+			<property name="HeatMapTime" value="1200"/>
+			<property name="HeatMapFrequency" value="25"/>
+			<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Workstation">
+				<property name="Modules" value="tools,output,fuel,input"/>
+				<property name="Collide" value="melee,bullet,arrow,rocket"/>
+				<property name="CraftingAreaRecipes" value="Oven"/>
+		</property>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench" />
+			<property name="OpenSound" value="cookopen" />
+			<property name="CloseSound" value="cookclose" />
+			<property name="CraftSound" value="cookcraft" />
+			<property name="WorkstationJournalTip" value="workbenchTip" />
+			<property class="RepairItems">
+				<property name="resourceWood" value="5"/>
+				<property name="resourceFeather" value="5"/></property>
+			<drop event="Harvest" name="resourceCloth" count="1" prob="0.3" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceFeather" count="3" prob="0.35" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceFeather" count="2" prob="0.6" tag="allHarvest"/>
+			<drop event="Destroy" name="resourceYuccaFibers" count="2,8"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="DescriptionKey" value="Feed the pig and get meat!"/>
+			<property name="EconomicValue" value="776"/>
+			<property name="Group" value="Workbenches,All"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+		</block>
+		<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									ANIMAL CRAFT STATIONS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+		<block name="Chicken Coop">
+			<property name="Extends" value="cntBirdnest"/>
+			<property name="CustomIcon" value="ChickenCoop"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/ChickenCoop.unity3d?ChickenCoopPrefab" param1="main_mesh"/>
+			<property name="FilterTags" value="floot,ffurniture"/>
+			<property name="Path" value="solid"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="Morganic"/>
+			<property name="MaxDamage" value="1100"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="HeatMapStrength" value="4"/>
+			<property name="HeatMapTime" value="600"/>
+			<property name="HeatMapFrequency" value="45"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Workstation">
+				<property name="Modules" value="output"/>
+				<property name="CraftingAreaRecipes" value="Chicken"/></property>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench" />
+			<property name="OpenSound" value="Animals/Chicken/chickenpain" />
+			<property name="CloseSound" value="Animals/Chicken/chickendeath" />
+			<property name="WorkstationJournalTip" value="workbenchTip" />
+			<property class="RepairItems">
+				<property name="resourceWood" value="5"/>
+				<property name="resourceFeather" value="5"/></property>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="DescriptionKey" value="Feed the chicken to get eggs and feathers!"/>
+			<property name="EconomicValue" value="776"/>
+			<property name="Group" value="Animals,All"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+		</block>
+		<block name="Cow">
+			<property name="Extends" value="cntBirdnest"/>
+			<property name="CustomIcon" value="Cow"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/CowCraft.unity3d?CowCraftPrefab" param1="main_mesh"/>
+			<property name="FilterTags" value="floot,ffurniture"/>
+			<property name="Path" value="solid"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,2,3"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="Morganic"/>
+			<property name="MaxDamage" value="6000"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="HeatMapStrength" value="15"/>
+			<property name="HeatMapTime" value="1200"/>
+			<property name="HeatMapFrequency" value="25"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Workstation">
+				<property name="Modules" value="output"/>
+				<property name="CraftingAreaRecipes" value="Cow"/></property>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench" />
+			<property name="OpenSound" value="cowopen" />
+			<property name="CloseSound" value="cowclose" />
+			<property name="CraftSound" value="cowcraft" />
+			<property name="CraftCompleteSound" value="cowcomplete" />
+			<property name="WorkstationJournalTip" value="workbenchTip" />
+			<property class="RepairItems">
+				<property name="resourceWood" value="5"/>
+				<property name="resourceFeather" value="5"/></property>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="DescriptionKey" value="Feed the cow and get meat!"/>
+			<property name="EconomicValue" value="776"/>
+			<property name="Group" value="Animals,All"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+		</block>
+		<block name="Pig">
+			<property name="CustomIcon" value="Pig"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/PigCraft.unity3d?PigCraftPrefab"/>
+			<property name="FilterTags" value="floot,ffurniture"/>
+			<property name="Path" value="solid"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,1,2"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="Morganic"/>
+			<property name="MaxDamage" value="3500"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="HeatMapStrength" value="8"/>
+			<property name="HeatMapTime" value="1200"/>
+			<property name="HeatMapFrequency" value="25"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Workstation">
+				<property name="Modules" value="output"/>
+				<property name="CraftingAreaRecipes" value="Pig"/></property>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench" />
+			<property name="OpenSound" value="Animals/Boar/boarroam" />
+			<property name="CloseSound" value="Animals/Boar/boarpain" />
+			<property name="WorkstationJournalTip" value="workbenchTip" />
+			<property class="RepairItems">
+				<property name="resourceWood" value="5"/>
+				<property name="resourceFeather" value="5"/></property>
+			<drop event="Harvest" name="resourceCloth" count="1" prob="0.3" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceFeather" count="3" prob="0.35" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceFeather" count="2" prob="0.6" tag="allHarvest"/>
+			<drop event="Destroy" name="resourceYuccaFibers" count="2,8"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="DescriptionKey" value="Feed the pig and get meat!"/>
+			<property name="EconomicValue" value="776"/>
+			<property name="Group" value="Animals,All"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+		</block>	
+		
+		<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									MISC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+		<block name="Shooting Bottle" name_key="BottleShot" desc_key="Shot shit">
+			<property name="Material" value="Mglass"/>
+			<property name="LightOpacity" value="1"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="CustomIcon" value="shootingbottle"/>
+			<property name="Model" value="#@modfolder:Resources/Bottle.unity3d?BottleShoot"/>
+			<property name="SortOrder2" value="0050"/> <!-- SortShape -->
+			<property name="Mesh" value="transparent"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="DescriptionKey" value="test123abc"/>
+			<drop event="Destroy" name="resourceBrokenGlass" count="1,4"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="FilterTags" value="fdecor,fwindows"/>
+			<property name="SortOrder1" value="7080"/>
+			<property name="Group" value="CTools,All"/>
+		</block>
+	</append>
+	
+	<append xpath="/blocks/block[@name='terrFertileFarmland']">
+		<property class="UpgradeBlock">
+				<property name="ToBlock" value="Fertile Animal Ground"/>
+				<property name="Item" value="Pitchfork"/>
+				<property name="ItemCount" value="0"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+	</append>
+</configs>

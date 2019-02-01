@@ -1,0 +1,53 @@
+<configs>
+	<append xpath="/ui_display_info/crafting_category_display" >
+	
+		<crafting_category_list display_type="Farm Table">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+			<crafting_category name="Seeds" icon="ui_game_symbol_tree" display_name="Seeds" icon_color="0,153,0"/>
+			<crafting_category name="SeedP" icon="ui_game_symbol_add" display_name="Seed Packs" icon_color="0,153,0"/>
+			<crafting_category name="Workbenches" icon="ui_game_symbol_workbench" display_name="Workbenches" icon_color="0,0,255"/>
+			<crafting_category name="Animals" icon="ui_game_symbol_bull" display_name="Animals" icon_color="255,255,0" />
+			<crafting_category name="CTools" icon="ui_game_symbol_tool" display_name="Tools" />
+		</crafting_category_list>
+		
+		<crafting_category_list display_type="Dairy Churn">
+			<crafting_category name="Dairy" icon="ui_game_symbol_fork" display_name="Churn" />
+		</crafting_category_list>
+		
+		<crafting_category_list display_type="Wine Cask">
+			<crafting_category name="Food/Cooking" icon="ui_game_symbol_beer" display_name="Cask" icon_color="174,0,255"/>
+		</crafting_category_list>
+		
+		<crafting_category_list display_type="Chicken Coop">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" />
+			<crafting_category name="Food/Cooking" icon="ui_game_symbol_resource" display_name="Production" />
+			<crafting_category name="Breeding" icon="ui_game_symbol_bull" display_name="Breeding" icon_color="153,0,0"/>
+		</crafting_category_list>
+		
+		<crafting_category_list display_type="Cow">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" />
+			<crafting_category name="Food/Cooking" icon="ui_game_symbol_resource" display_name="Production" />
+			<crafting_category name="Breeding" icon="ui_game_symbol_bull" display_name="Breeding" icon_color="153,0,0"/>
+		</crafting_category_list>
+		
+		<crafting_category_list display_type="Pig">
+			<crafting_category name="Breeding" icon="ui_game_symbol_bull" display_name="Breeding" icon_color="153,0,0"/>
+		</crafting_category_list>
+		
+		<crafting_category_list display_type="Butcher Table">
+			<crafting_category name="Food/Cooking" icon="ui_game_symbol_knife" display_name="Butchering" icon_color="153,0,0"/>
+		</crafting_category_list>
+		
+		<crafting_category_list display_type="Grain Processor">
+			<crafting_category name="Grain" icon="ui_game_symbol_coffee" display_name="Grain Processor" />
+		</crafting_category_list>
+		
+		<crafting_category_list display_type="Smoker">
+			<crafting_category name="Smoker" icon="ui_game_symbol_spatula" display_name="Smoker" icon_color="255,111,0" />
+		</crafting_category_list>
+		
+		<crafting_category_list display_type="Grill">
+			<crafting_category name="Oven" icon="ui_game_symbol_spatula" display_name="Grill" icon_color="255,111,0" />
+		</crafting_category_list>
+	</append>
+</configs>

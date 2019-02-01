@@ -1,0 +1,96 @@
+<configs>
+<insertBefore xpath="/lootcontainers/lootgroup[@name='questChallenge']">
+
+<lootgroup name="seedpack" count="all">
+		<item name="Seed Pack" count="1"/>
+	</lootgroup>
+	
+<lootgroup name="butcher" count="all">
+		<item name="Butcher Knife" count="1"/>
+	</lootgroup>
+	
+<lootgroup name="scythe" count="all">
+		<item name="Scythe" count="1"/>
+	</lootgroup>
+	
+<lootgroup name="fryingpan" count="all">
+		<item name="Frying Pan" count="1"/>
+	</lootgroup>
+	
+<lootgroup name="pitchfork" count="all">
+		<item name="Pitchfork" count="1"/>
+	</lootgroup>
+	
+<lootgroup name="salt" count="all">
+		<item name="Salt" count="1,8"/>
+	</lootgroup>
+
+</insertBefore>
+
+<!-- Stove -->
+<append xpath="/lootcontainers/lootcontainer[@id='5']">	
+	<item group="fryingpan" count="1" prob="0.1"/>	
+	<item group="butcher" count="1" prob="0.02"/>
+</append>
+<!-- Kitchen Sinks -->
+<append xpath="/lootcontainers/lootcontainer[@id='8']">	
+	<item group="fryingpan" count="1" prob="0.2"/>	
+	<item group="seedpack" count="1" prob="0.05"/>
+	<item group="butcher" count="1" prob="0.02"/>
+</append>
+<!-- Trash -->
+<append xpath="/lootcontainers/lootcontainer[@id='10']">
+	<item group="salt" count="1" prob=".02"/>
+</append>
+<!-- Cupboard -->
+<append xpath="/lootcontainers/lootcontainer[@id='17']">	
+	<item group="salt" count="1" prob=".1"/>	
+	<item group="seedpack" count="1" prob="0.05"/>
+	<item group="fryingpan" count="1" prob="0.01"/>
+	<item group="butcher" count="1" prob="0.002"/>
+</append>
+<!--  Fridge -->
+<append xpath="/lootcontainers/lootcontainer[@id='20']">	
+	<item group="salt" count="1" prob=".02"/>	
+</append>
+<!--  Garage Box -->
+<append xpath="/lootcontainers/lootcontainer[@id='22']">	
+	<item group="pitchfork" count="1" prob="0.01"/>
+	<item group="fryingpan" count="1" prob="0.01"/>
+	<item group="seedpack" count="1" prob="0.035"/>
+	<item group="scythe" count="1" prob="0.001"/>
+	<item group="butcher" count="1" prob="0.002"/>
+</append>
+<!-- Supply drop general  -->
+<append xpath="/lootcontainers/lootcontainer[@id='34']">		
+	<item group="seedpack" count="1" prob="0.035"/>
+</append>
+<!-- Shamway Safe  -->
+<append xpath="/lootcontainers/lootcontainer[@id='38']">
+	<item group="seedpack" count="1,3" prob="0.02"/>
+</append>
+<!-- Another Fridge?  -->
+<append xpath="/lootcontainers/lootcontainer[@id='47']">
+	<item group="salt" count="1" prob=".02"/>
+</append>
+<!-- Shopping Cart  -->
+<append xpath="/lootcontainers/lootcontainer[@id='54']">
+	<item group="salt" count="1" prob=".02"/>
+</append>
+<!-- Shopping Basket  -->
+<append xpath="/lootcontainers/lootcontainer[@id='58']">
+	<item group="salt" count="1" prob=".02"/>
+</append>
+<!-- Shamyway Box  -->
+<append xpath="/lootcontainers/lootcontainer[@id='59']">
+	<item group="salt" count="1" prob=".02"/>	
+	<item group="seedpack" count="1" prob="0.05"/>
+</append>
+<!-- Construction Shit  -->
+<append xpath="/lootcontainers/lootcontainer[@id='88']">
+	<item group="pitchfork" count="1" prob="0.01"/>
+	<item group="fryingpan" count="1" prob="0.01"/>
+	<item group="scythe" count="1" prob="0.001"/>
+	<item group="butcher" count="1" prob="0.002"/>
+</append>
+</configs>

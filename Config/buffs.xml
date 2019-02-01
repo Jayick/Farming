@@ -1,0 +1,455 @@
+<configs>
+<append xpath="/buffs">
+
+<!-- Fast food/fatty buffs -->
+
+	<buff name="buffStuffed" name_key="Stuffed" description_key="I couldn't eat another bite! -20% walk/run speed, -15% jump, +1 Fort, -1 AGI. HP Regen." tooltip_key="Ugh, so stuffed!" icon="ui_game_symbol_spatula" icon_color="217,217,35" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="60"/>
+		<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffStuffed">
+					<requirement name="HasBuff" buff="buffFatty"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffFatty">
+						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="1"/>
+				</triggered_effect>
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value=".2"/>
+			<passive_effect name="RunSpeed" operation="perc_subtract" value=".2"/>
+			<passive_effect name="HealthGain" operation="base_add" value="20" />
+			<passive_effect name="JumpStrength" operation="perc_subtract" value=".15" />
+			<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="1" />
+			<passive_effect name="AttributeLevel" tags="attAgility" operation="base_subtract" value="1" />
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+					
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffOneWithNature,buffNightTime,buffHealthy,buffRiseAndShine,buffBeefcake,buffPumpedUp,buffMartialArtist,buffKungFoo">
+						<requirement name="HasBuff" buff="buffStuffed"/>
+					</triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffFatty" name_key="Fatty" description_key="Put Down the junk food!" tooltip_key="Oink Oink" icon="ui_game_symbol_stomach" icon_color="217,217,35" icon_blink="true" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="30"/>
+		<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" target="self" buff="buffStuffed"/>
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value=".4"/>
+			<passive_effect name="RunSpeed" operation="perc_subtract" value=".5"/>
+			<passive_effect name="HealthGain" operation="base_add" value="40" />
+			<passive_effect name="JumpStrength" operation="perc_subtract" value=".3" />
+			<passive_effect name="StaminaChangeOT" operation="perc_subtract" value=".5" />
+			<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="3" />
+			<passive_effect name="AttributeLevel" tags="attAgility" operation="base_subtract" value="3" />
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="self" buff="buffStuffed"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" target="self" buff="buffDrunky">
+						<requirement name="HasBuff" buff="buffFatty"/>
+						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="15"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffAllNatural,buffNightTime,buffOneWithNature,buffHealthy,buffRiseAndShine,buffBeefcake,buffPumpedUp,buffMartialArtist,buffKungFoo">
+						<requirement name="HasBuff" buff="buffFatty"/>
+					</triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffDrunky" name_key="Drunky!" description_key="Whoah there buddy. Getting a little over confident there? +50% Entity Damage with melee, -20% Attack Speed, +20% Run speed, +1 STR, -Attack Stamina." tooltip_key="Drunken Fool" icon="ui_game_symbol_beer" icon_color="0,153,0" icon_blink="true" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="45"/>
+		<effect_group>
+			<passive_effect name="RunSpeed" operation="perc_add" value=".2"/>
+			<passive_effect name="AttributeLevel" operation="base_subtract" value="1" tags="attStrength"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="melee,fists"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="20" tags="coredamageresist"/>
+			<passive_effect name="StaminaLoss" operation="base_add" value="15" tags="primary,secondary"/>
+			<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.2" tags="primary,secondary" />
+					<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="self" buff="buffPuking1">
+									<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="15"/>
+									<requirement name="HasBuff" buff="buffDrunky"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffRemove" action="Ragdoll" target="self" duration="3">
+									<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="15"/>
+									<requirement name="HasBuff" buff="buffDrunky"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffHotWings,buffNightTime,buffRiseAndShine,buffHealthy,buffAllNatural,buffIScream">
+						<requirement name="HasBuff" buff="buffDrunky"/>
+					</triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffMilk" name_key="Milk" description_key="Straight from the teat!" tooltip_key="Moooooooooo!" icon="ui_game_symbol_bull" icon_color="217,217,35" icon_blink="true" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="3"/>
+		<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffHotWings">
+									<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="25"/>
+						<requirement name="HasBuff" buff="buffMilk"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffDrunky">
+									<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="15"/>
+						<requirement name="HasBuff" buff="buffMilk"/>
+					</triggered_effect>
+		</effect_group>
+	</buff>
+<!-- Nature buffs -->
+
+	<buff name="buffRiseAndShine" name_key="Rise and Shine!" description_key="Well balanced breakfast! +40% walk/run speed, +1 Fort +1 Agi +Stam/HP regen." tooltip_key="Eat well live well!" icon="ui_game_symbol_coffee" icon_color="102,83,22" icon_blink="true" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="15"/>
+		<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" target="self" buff="buffRiseAndShine">
+						<requirement name="HasBuff" buff="buffFatty"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffHealthy">
+						<requirement name="HasBuff" buff="buffRiseAndShine"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffIllInfection0,buffIllInfection1,buffIllInfection2,buffIllInfection3,buffNightTime">
+						<requirement name="HasBuff" buff="buffRiseAndShine"/>
+					</triggered_effect>
+			<passive_effect name="WalkSpeed" operation="perc_add" value="1"/>
+			<passive_effect name="RunSpeed" operation="perc_add" value=".3"/>
+			<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="3" />
+			<passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="3" />
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			<passive_effect name="StaminaChangeOT" operation="base_add" value="5" duration="5"/>
+			<passive_effect name="HealthChangeOT" operation="base_add" value="5" duration="5"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="self" buff="buffHealthy"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffHealthy" name_key="Healthy Living!" description_key="Eat Well live well! +40% walk/run speed, +1 Fort +1 Agi +Stam/HP regen." tooltip_key="Eat well live well!" icon="ui_game_symbol_adventure" icon_color="102,83,22" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="180"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffIllInfection0,buffNightTime">
+				<requirement name="HasBuff" buff="buffHealthy"/>
+			</triggered_effect>
+			<passive_effect name="WalkSpeed" operation="perc_add" value=".7"/>
+			<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
+			<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="1" />
+			<passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="1" />
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			<passive_effect name="StaminaChangeOT" operation="base_add" value=".25"/>
+			<passive_effect name="HealthChangeOT" operation="base_add" value=".25"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" target="self" buff="buffFatty">
+						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="25"/>
+					</triggered_effect>
+		</effect_group>
+	</buff>
+
+	<buff name="buffOneWithNature" name_key="One With Nature" description_key="Hippy! But atleast nature loves you. +20% Block damage, +20% Combat Speed , +25% harvest amount bonus, -25% Damage Resistance. Cancels on combat." tooltip_key="One with Nature" icon="ui_game_symbol_tree" icon_color="0,153,0" icon_blink="true" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="60"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffBeefcake,buffPumpedUp,buffSmartyPants,buffAllNatural,buffNightTime">
+				<requirement name="HasBuff" buff="buffOneWithNature"/>
+			</triggered_effect>
+			<passive_effect name="CarryCapacity" operation="base_set" value="50" />
+			<passive_effect name="BlockDamage" operation="perc_add" value=".2" tags="melee"/>
+			<passive_effect name="HarvestCount" operation="base_add" value=".25"/>
+			<passive_effect name="AttacksPerMinute" operation="perc_add" value=".2" />
+			<passive_effect name="PhysicalDamageResist" operation="base_subtract" value="25" tags="coredamageresist"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="RemoveBuff" target="self" buff="buffOneWithNature">
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="self" buff="buffAllNatural"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffAllNatural" name_key="All natural!" description_key="+9 Carry, +10% Harvest Amount, +10% Block Damage, +10% Combat Speed, -10% Damage Resistance. Cancels on Combat" tooltip_key="Aaah, nature!" icon="ui_game_symbol_tree" icon_color="0,153,0" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="120"/>
+		<effect_group>
+			<passive_effect name="CarryCapacity" operation="perc_add" value="9" />
+			<passive_effect name="HarvestCount" operation="base_add" value=".1"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value=".1" tags="melee"/>
+			<passive_effect name="AttacksPerMinute" operation="perc_add" value=".1" />
+			<passive_effect name="PhysicalDamageResist" operation="base_subtract" value="10" tags="coredamageresist"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="RemoveBuff" target="self" buff="buffAllNatural">
+			</triggered_effect>
+		</effect_group>
+	</buff>
+	
+<!-- Learning buffs -->
+
+	<buff name="buffSmartyPants" name_key="Smarty Pants!" description_key="Look how smart you are, nerd! +25% XP gain, +2 Craft Tier, +30% craft speed, +20% barter prices, -9 Carry Cap, -45% Damage Resistance." tooltip_key="Smarty Pants" icon="ui_game_symbol_book" icon_color="25,163,227" icon_blink="true" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="45"/>
+		<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffBeefcake,buffPumpedUp,buffNightTime,buffSmarty">
+						<requirement name="HasBuff" buff="buffSmartyPants"/>
+					</triggered_effect>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value=".25" />
+			<passive_effect name="CraftingTier" operation="base_add" value="2"/>
+			<passive_effect name="CraftingTime" operation="perc_add" value="-.3"/>
+			<passive_effect name="Bartering" operation="perc_add" value=".2" />
+			<passive_effect name="CarryCapacity" operation="base_subtract" value="9" />
+			<passive_effect name="PhysicalDamageResist" operation="base_subtract" value="45" tags="coredamageresist"/>
+			<triggered_effect trigger="onOtherDamagedSelf" action="RemoveBuff" target="self" buff="buffSmartyPants"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="self" buff="buffSmarty"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffSmarty" name_key="Smarty!" description_key="+10% Xp gain, +1 Craft Tier, +10% Craft Speed, +10% Bartering Prices, -20% Damage Resistance." tooltip_key="Smarty" icon="ui_game_symbol_book" icon_color="25,163,227" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="120"/>
+		<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffPumpedUp,buffNightTime">
+						<requirement name="HasBuff" buff="buffSmarty"/>
+					</triggered_effect>	
+			<passive_effect name="PlayerExpGain" operation="perc_add" value=".1" />
+			<passive_effect name="CraftingTier" operation="base_add" value="1"/>
+			<passive_effect name="CraftingTime" operation="perc_add" value="-.1"/>
+			<passive_effect name="Bartering" operation="perc_add" value=".1" />
+			<triggered_effect trigger="onOtherDamagedSelf" action="RemoveBuff" target="self" buff="buffSmarty"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_subtract" value="20" tags="coredamageresist"/>
+		</effect_group>
+	</buff>
+	
+<!-- Combat buffs -->
+
+	<buff name="buffBeefcake" name_key="Beefcake" description_key="Strong, but dumb as bricks. -30% walk/run speed, -2 Craft Tier, -40% Craft Time, +3 Strength, +Full Carry Cap, +500% Entity Damage/w melee and fists. +90% damage resistance, 0 Stamina Loss, +50% Combat Speed." tooltip_key="Beefcake" icon="ui_game_symbol_muscle" icon_color="153,0,0" icon_blink="true" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="30"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffIllInfection0">
+				<requirement name="HasBuff" buff="buffBeefcake"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffInjuryBleeding">
+				<requirement name="HasBuff" buff="buffBeefcake"/>
+			</triggered_effect>
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value=".3"/>
+			<passive_effect name="RunSpeed" operation="perc_subtract" value=".3"/>
+			<passive_effect name="CraftingTier" operation="base_add" value="-2"/>
+			<passive_effect name="CraftingTime" operation="perc_add" value=".4"/>
+			<passive_effect name="RunSpeed" operation="perc_subtract" value=".3"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="35" tags="coredamageresist"/>
+			<passive_effect name="StaminaLoss" operation="base_set" value="0" tags="primary"/>
+			<passive_effect name="AttacksPerMinute" operation="perc_add" value=".5" >
+				<requirement name="HoldingItemHasTags" tags="melee,fists" />
+			</passive_effect>
+			<passive_effect name="CarryCapacity" operation="base_set" value="50" />
+			<passive_effect name="EntityDamage" operation="perc_add" value="5" >
+				<requirement name="HoldingItemHasTags" tags="melee,fists" />
+			</passive_effect>
+			<passive_effect name="AttributeLevel" operation="base_add" value="3" tags="attStrength"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="self" buff="buffPumpedUp"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffSmartyPants,buffNightTime,buffSmarty,buffMartialArtist,buffKungFoo,buffPumpedUp">
+						<requirement name="HasBuff" buff="buffBeefcake"/>
+					</triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffPumpedUp" name_key="Pumped up!" description_key="Strong as an Ox! -10% walk/run speed, -5% Craft Time, +1 Strength, +Full Carry Cap, +20% Entity Damage/w melee and fists. +25% damage resistance, +10% Combat Speed." tooltip_key="Beefcake" icon="ui_game_symbol_muscle" icon_color="153,0,0" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="90"/>
+		<effect_group>
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value=".1"/>
+			<passive_effect name="RunSpeed" operation="perc_subtract" value=".1"/>
+			<passive_effect name="StaminaLoss" operation="base_add" value="-5" tags="primary"/>
+			<passive_effect name="CraftingTime" operation="perc_add" value=".05"/>
+			<passive_effect name="RunSpeed" operation="perc_subtract" value=".1"/>
+			<passive_effect name="CarryCapacity" operation="base_set" value="50" />
+			<passive_effect name="AttacksPerMinute" operation="perc_add" value=".1" >
+				<requirement name="HoldingItemHasTags" tags="melee,fists" />
+			</passive_effect>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".5" >
+				<requirement name="HoldingItemHasTags" tags="melee,fists" />
+			</passive_effect>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="25" tags="coredamageresist"/>
+			<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attStrength"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffSmarty,buffNightTime,buffMartialArtist">
+						<requirement name="HasBuff" buff="buffPumpedUp"/>
+					</triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffUSMC" name_key="Crayon" description_key="Crayon" tooltip_key="Crayon" icon="ui_game_symbol_rifle" icon_color="255,0,0" icon_blink="true" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="15"/>
+		<effect_group>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="200"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="200"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="200"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="water" operation="add" value="200"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="add" value="200"/> <!-- X -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthIncrease" operation="add" value="200"/>
+		
+			<passive_effect name="RoundsPerMinute" operation="perc_add" value="2"/>
+			<passive_effect name="IncrementalSpreadMultiplier" operation="perc_subtract" value=".5"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="gun,head"/>
+			<passive_effect name="RunSpeed" operation="perc_add" value="1"/>
+			<passive_effect name="StaminaLoss" operation="base_set" value="0" tags="secondary,gun" />
+		</effect_group>
+	</buff>
+	
+<!-- Fun buffs -->
+
+
+	<buff name="buffHotWings" name_key="buffMegaCrushName" description_key="WOW THATS HOT! 200% Run Speed, +20 Health, +50% Stamina Cost, -Heat Resistance, +Cold Resistance." tooltip_key="OH HOT HOT HOT!" icon="ui_game_symbol_fire" icon_color="153,0,0" icon_blink="true" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="10"/>
+		<effect_group>
+			<passive_effect name="RunSpeed" operation="perc_add" value="1"/>
+			<passive_effect name="HealthChangeOT" operation="base_add" value="2"/>
+			<passive_effect name="StaminaLoss" operation="perc_add" value="5" />
+			<passive_effect name="HypothermalResist" operation="base_add" value="65"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="-20"/>
+			<passive_effect name="WaterChangeOT" operation="base_subtract" value="2"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="Ragdoll" target="self" duration="1">
+									<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="1"/>
+									<requirement name="HasBuff" buff="buffHotWings"/>
+					</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="self" buff="buffWaterPlease"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffIScream,buffNightTime,buffSmartyPants,buffSmarty,buffMartialArtist,buffKungFoo,buffWaterPlease">
+						<requirement name="HasBuff" buff="buffHotWings"/>
+					</triggered_effect>
+		</effect_group>
+	</buff>
+
+	<buff name="buffWaterPlease" name_key="Water! Please!" description_key="Still smoking! +40% Run speed, +10% Stamina cost, -Heat Resistance, +Cold Resistance." tooltip_key="So thirsty!" icon="ui_game_symbol_fire" icon_color="255,132,0" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="20"/>
+		<effect_group>
+			<passive_effect name="RunSpeed" operation="perc_add" value=".4"/>
+			<passive_effect name="StaminaLoss" operation="perc_add" value=".5" />
+			<passive_effect name="HealthChangeOT" operation="base_add" value=".1"/>
+			<passive_effect name="HypothermalResist" operation="base_add" value="40"/>
+			<passive_effect name="HyperthermalResist" operation="base_set" value="-5"/>
+			<passive_effect name="WaterChangeOT" operation="base_subtract" value="1.5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffIScream" name_key="I Scream" description_key="I Scream" tooltip_key="You Scream" icon="ui_game_symbol_cold" icon_color="0,0,255" icon_blink="true" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="90"/>
+		<effect_group>
+			<passive_effect name="HypothermalResist" operation="base_add" value="-20"/>
+			<passive_effect name="HyperthermalResist" operation="base_set" value="65"/>
+			<passive_effect name="WaterChangeOT" operation="base_add" value="2"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffHotWings,buffWaterPlease">
+						<requirement name="HasBuff" buff="buffIScream"/>
+						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="50"/>
+					</triggered_effect>
+			<passive_effect name="AttributeLevel" tags="attFortitude" target="selfAOE" operation="base_add" value="3" />
+			<passive_effect name="AttributeLevel" tags="attIntelligence" target="selfAOE" operation="base_add" value="3" />
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffFresh" name_key="" description_key="Fresh is best!" tooltip_key="Fresh produce" icon="ui_game_symbol_book" icon_color="0,255,30" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="5"/>
+		<effect_group>
+			<passive_effect name="StaminaChangeOT" operation="base_add" value="1"/>
+			<passive_effect name="HealthChangeOT" operation="base_add" value="1"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffCarbs" name_key="" description_key="Carbs" tooltip_key="Carbo load!" icon="ui_game_symbol_fork" icon_color="0,0,0" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="15"/>
+		<effect_group>
+			<passive_effect name="RunSpeed" operation="perc_add" value="-.1"/>
+			<passive_effect name="WalkSpeed" operation="perc_add" value="-.1"/>
+			<passive_effect name="CriticalChance" operation="perc_add" value=".1"/>
+			<passive_effect name="StaminaChangeOT" operation="base_add" value="2"/>
+			<passive_effect name="HealthChangeOT" operation="base_add" value="2"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffKungFoo" name_key="Kung Foo!" description_key="ROUND 1! FIGHT!!!" tooltip_key="KUNG FOO MASTER!" icon="ui_game_symbol_knunchuck" icon_color="153,0,153" icon_blink="true" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="15"/>
+		<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffSmartyPants,buffNightTime,buffSmarty,buffBeefcake,buffPumpedup,buffMartialArtist,buffHotWings,buffOneWithNature,buffAllNatural">
+						<requirement name="HasBuff" buff="buffKungFoo"/>
+					</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffDontBreakMyLeg"/>
+			<triggered_effect trigger="onSelfJump" action="PlaySound" sound="mariojump" play_in_head="true"/>
+			<passive_effect name="NoiseMultiplier" operation="perc_subtract" value="1"/>
+			<passive_effect name="ScavengingTime" operation="base_add" value="-1"/>
+			<passive_effect name="RunSpeed" operation="perc_add" value="1"/>
+			<passive_effect name="CrouchSpeed" operation="perc_add" value="2"/>
+			<passive_effect name="JumpStrength" operation="perc_add" value="2" />
+			<passive_effect name="EntityDamage" operation="perc_add" value="4" >
+				<requirement name="HoldingItemHasTags" tags="fists" />
+			</passive_effect>
+			<passive_effect name="StaminaLoss" operation="base_set" value="0" tags="primary,jumping,running">
+				<requirement name="HoldingItemHasTags" tags="fists" />
+			</passive_effect>
+			<passive_effect name="MaxRange" operation="base_set" value="8" >
+				<requirement name="HoldingItemHasTags" tags="fists" />
+			</passive_effect>
+			<passive_effect name="AttacksPerMinute" operation="perc_add" value="10" tags="primary" >	
+				<requirement name="HoldingItemHasTags" tags="fists" />
+			</passive_effect>
+			<passive_effect name="BlockDamage" operation="perc_add" value="10" tags="secondary">
+				<requirement name="HoldingItemHasTags" tags="fists" />
+			</passive_effect>	
+			<triggered_effect trigger="onOtherDamagedSelf" action="RemoveBuff" target="self" buff="buffKungFoo"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="self" buff="buffMartialArtist"/>
+		</effect_group>
+		</buff>
+		
+	<buff name="buffMartialArtist" name_key="Martial Artist!" description_key="Awaken your inner martial artist. Jump high, strike fast and true!" tooltip_key="Strike true and fast!" icon="ui_game_symbol_knunchuck" icon_color="153,0,153" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="165"/>
+		<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffSmarty,buffPumpedUp,buffHotWings,buffAllNatural,buffNightTime">
+						<requirement name="HasBuff" buff="buffMartialArtist"/>
+					</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffDontBreakMyLeg"/>
+			<triggered_effect trigger="onSelfJump" action="PlaySound" sound="mariojump" play_in_head="true"/>
+			<passive_effect name="NoiseMultiplier" operation="perc_subtract" value=".25"/>
+			<passive_effect name="ScavengingTime" operation="base_add" value="-.2"/>
+			<passive_effect name="RunSpeed" operation="perc_add" value=".3"/>
+			<passive_effect name="CrouchSpeed" operation="perc_add" value=".6"/>
+			<passive_effect name="JumpStrength" operation="perc_add" value="1" />
+			<passive_effect name="EntityDamage" operation="perc_add" value="1" >
+				<requirement name="HoldingItemHasTags" tags="fists" />
+			</passive_effect>
+			<passive_effect name="StaminaLoss" operation="base_set" value="0" tags="jumping,primary">
+				<requirement name="HoldingItemHasTags" tags="fists" />
+			</passive_effect>
+			<passive_effect name="MaxRange" operation="base_set" value="4" >
+				<requirement name="HoldingItemHasTags" tags="fists" />
+			</passive_effect>
+			<passive_effect name="BlockDamage" operation="perc_add" value="2" tags="wood,secondary">	
+				<requirement name="HoldingItemHasTags" tags="fists" />
+			</passive_effect>
+			
+			<passive_effect name="AttacksPerMinute" operation="perc_add" value="5" tags="primary" >	
+				<requirement name="HoldingItemHasTags" tags="fists" />
+			</passive_effect>
+			<triggered_effect trigger="onOtherDamagedSelf" action="RemoveBuff" target="self" buff="buffMartialArtist"/>
+		</effect_group>
+		</buff>	
+		
+	<buff name="buffNightTime" name_key="Night Time" description_key="Perfect snack right before night! 20% EXP, Instant Craft, +2 Crafting Tier, Full carry Cap, 100% block damage with tools." tooltip_key="Sweet Dreams" icon="ui_game_symbol_bed" icon_color="201,147,147" icon_blink="false" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="300"/>
+		<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" target="self" buff="buffSmarty,buffPumpedUp,buffHealthy,buffAllNatural,buffOneWithNature,buffBeefcake,buffRiseAndShine,buffMartialArtist,buffKungFoo,">
+						<requirement name="HasBuff" buff="buffNightTime"/>
+					</triggered_effect>
+			<passive_effect name="CarryCapacity" operation="perc_add" value="50" />
+			<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="melee"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value="0.2" />
+			<passive_effect name="RepairTime" operation="base_set" value="1" />
+			<passive_effect name="CraftingTime" operation="base_set" value=".25" />
+			<passive_effect name="CraftingTier" operation="perc_add" value="2" />
+			<triggered_effect trigger="onSelfAttackedOther" action="RemoveBuff" target="self" buff="buffNightTime"/>
+			<triggered_effect trigger="onOtherDamagedSelf" action="RemoveBuff" target="self" buff="buffNightTime"/>
+		</effect_group>
+	</buff>
+</append>
+</configs>

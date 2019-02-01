@@ -1,0 +1,583 @@
+<configs>
+	<append xpath="/recipes">
+		<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									Crafting Tables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+	
+		<recipe name="Well" craft_time="30" count="1" craft_area="Farm Table" tags="learnable">
+			<ingredient name="resourceRockSmall" count="250"/>
+			<ingredient name="resourceWood" count="500"/>
+			<ingredient name="bucketRiverWater" count="1"/>
+		</recipe>
+
+		<recipe name="Farm Table" craft_time="30" count="1" tags="learnable">
+			<ingredient name="resourceScrapIron" count="250"/>
+			<ingredient name="resourceWood" count="500"/>
+		</recipe>
+
+		<recipe name="Dairy Churn" count="1" craft_time="30" craft_area="Farm Table" tags="learnable">
+			<ingredient name="resourceForgedIron" count="25"/>
+			<ingredient name="resourceRockSmall" count="250"/>
+			<ingredient name="resourceWood" count="50"/>
+		</recipe>
+
+		<recipe name="Wine Cask" count="1" craft_time="15" craft_area="Farm Table" tags="learnable">
+			<ingredient name="resourceForgedIron" count="25"/>
+			<ingredient name="resourceWood" count="200"/>
+		</recipe>
+
+		<recipe name="Butcher Table" count="1" craft_time="60" craft_area="Farm Table" tags="learnable">
+			<ingredient name="resourceForgedIron" count="25"/>
+			<ingredient name="resourceRockSmall" count="250"/>
+			<ingredient name="resourceWood" count="50"/>
+		</recipe>
+
+		<recipe name="Grain Processor" count="1" craft_time="15" craft_area="Farm Table" tags="learnable">
+			<ingredient name="resourceScrapIron" count="250"/>
+			<ingredient name="resourceWood" count="200"/>
+		</recipe>
+		
+		<recipe name="Smoker" count="1" craft_time="30" craft_area="Farm Table" tags="learnable">
+			<ingredient name="resourceScrapIron" count="250"/>
+			<ingredient name="resourceWood" count="200"/>
+		</recipe>
+		
+		<recipe name="Grill" count="1" craft_time="30" craft_area="Farm Table" tags="learnable">
+			<ingredient name="resourceScrapIron" count="250"/>
+			<ingredient name="resourceWood" count="200"/>
+		</recipe>
+		<!-- Animals -->
+		<recipe name="Chicken Coop" count="1" craft_time="300" craft_area="Farm Table" tags="learnable">
+			<ingredient name="resourceScrapIron" count="25"/>
+			<ingredient name="Animal Bedding" count="20"/>
+			<ingredient name="Animal Feed" count="60"/>
+			<ingredient name="resourceWood" count="50"/>
+		</recipe>
+
+		<recipe name="Cow" count="1" craft_time="900" craft_area="Farm Table" tags="learnable">
+			<ingredient name="Animal Bedding" count="80"/>
+			<ingredient name="Animal Feed" count="200"/>
+		</recipe>
+
+		<recipe name="Pig" count="1" craft_time="600" craft_area="Farm Table" tags="learnable">
+			<ingredient name="Animal Bedding" count="60"/>
+			<ingredient name="Animal Feed" count="150"/>
+		</recipe>
+		<!-- Tools -->
+		<recipe name="Scythe" count="1" craft_time="60" craft_area="Farm Table" tags="learnable">
+			<ingredient name="resourceScrapIron" count="250"/>
+			<ingredient name="resourceWood" count="200"/>
+		</recipe>
+		
+		<recipe name="Frying Pan" count="1" craft_time="15" craft_area="Farm Table" tags="learnable">
+			<ingredient name="resourceScrapIron" count="250"/>
+			<ingredient name="resourceWood" count="200"/>
+		</recipe>
+		
+		<recipe name="Butcher Knife" count="1" craft_time="30" craft_area="Farm Table" tags="learnable">
+			<ingredient name="resourceScrapIron" count="250"/>
+			<ingredient name="resourceWood" count="200"/>
+		</recipe>
+		
+		<recipe name="Pitchfork" count="1" craft_time="15" craft_area="Farm Table" tags="learnable">
+			<ingredient name="resourceScrapIron" count="250"/>
+			<ingredient name="resourceWood" count="200"/>
+		</recipe>
+		<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									SEEDS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+		<recipe name="Sugar Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Sugarcane Stalk" count="4"/>
+		</recipe>
+		<recipe name="Wheat Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Wheat" count="4"/>
+		</recipe>
+		<recipe name="Marijuana Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Hemp" count="4"/>
+		</recipe>
+		<recipe name="Sunflower Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Sunflower Seed" count="4"/>
+		</recipe>
+		<recipe name="Tomato Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Tomatoes" count="4"/>
+		</recipe>
+		<recipe name="Jalapeno Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Jalapeno Pepper" count="4"/>
+		</recipe>
+		<recipe name="Grape Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Grapes" count="4"/>
+		</recipe>
+		<recipe name="Flax Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Flax Fiber" count="4"/>
+		</recipe>
+		<recipe name="Apple Sapling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Apples" count="4"/>
+		</recipe>
+		<recipe name="Strawberry Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Strawberries" count="4"/>
+		</recipe>
+		<recipe name="Herb Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Herbs" count="4"/>
+		</recipe>
+		<recipe name="Nut Tree Sapling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Nuts" count="4"/>
+		</recipe>
+		<recipe name="Spice Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Spices" count="4"/>
+		</recipe>
+		<recipe name="Rice Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Rice" count="4"/>
+		</recipe>
+		
+		
+		<recipe name="Sugar Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Seed Pack" count="1"/>
+		</recipe>
+		<recipe name="Wheat Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Seed Pack" count="1"/>
+		</recipe>
+		<recipe name="Marijuana Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Seed Pack" count="1"/>
+		</recipe>
+		<recipe name="Sunflower Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Seed Pack" count="1"/>
+		</recipe>
+		<recipe name="Tomato Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Seed Pack" count="1"/>
+		</recipe>
+		<recipe name="Jalapeno Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Seed Pack" count="1"/>
+		</recipe>
+		<recipe name="Grape Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Seed Pack" count="1"/>
+		</recipe>
+		<recipe name="Flax Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Seed Pack" count="1"/>
+		</recipe>
+		<recipe name="Apple Sapling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Seed Pack" count="1"/>
+		</recipe>
+		<recipe name="Strawberry Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Seed Pack" count="1"/>
+		</recipe>
+		<recipe name="Herb Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Seed Pack" count="1"/>
+		</recipe>
+		<recipe name="Nut Tree Sapling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Seed Pack" count="1"/>
+		</recipe>
+		<recipe name="Spice Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Seed Pack" count="1"/>
+		</recipe>
+		<recipe name="Rice Seedling" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Seed Pack" count="1"/>
+		</recipe>
+		
+		<recipe name="Seed Pack" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Sugar Seedling" count="10"/>
+		</recipe>
+		<recipe name="Seed Pack" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Wheat Seedling" count="10"/>
+		</recipe>
+		<recipe name="Seed Pack" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Marijuana Seedling" count="10"/>
+		</recipe>
+		<recipe name="Seed Pack" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Sunflower Seedling" count="10"/>
+		</recipe>
+		<recipe name="Seed Pack" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Tomato Seedling" count="10"/>
+		</recipe>
+		<recipe name="Seed Pack" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Jalapeno Seedling" count="10"/>
+		</recipe>
+		<recipe name="Seed Pack" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Grape Seedling" count="10"/>
+		</recipe>
+		<recipe name="Seed Pack" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Flax Seedling" count="10"/>
+		</recipe>
+		<recipe name="Seed Pack" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Apple Sapling" count="10"/>
+		</recipe>
+		<recipe name="Seed Pack" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Strawberry Seedling" count="10"/>
+		</recipe>
+		<recipe name="Seed Pack" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Herb Seedling" count="10"/>
+		</recipe>
+		<recipe name="Seed Pack" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Nut Tree Sapling" count="10"/>
+		</recipe>
+		<recipe name="Seed Pack" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Spice Seedling" count="10"/>
+		</recipe>
+		<recipe name="Seed Pack" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Rice Seedling" count="10"/>
+		</recipe>
+		
+		
+		<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									Animal Station Recipes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+		<recipe name="resourceFeather" count="5" craft_time="1" craft_area="Chicken">
+			<ingredient name="Animal Feed" count="10"/>
+		</recipe>
+		<recipe name="foodEgg" count="2" craft_time="30" craft_area="Chicken">
+			<ingredient name="Animal Feed" count="10"/>
+		</recipe>
+		<recipe name="Milk" count="1" craft_time="60" craft_area="Cow">
+			<ingredient name="Animal Feed" count="3"/>
+		</recipe>
+		<recipe name="Fertile Egg" count="1" craft_time="600" craft_area="Chicken" tags="learnable">
+			<ingredient name="Animal Feed" count="15"/>
+		</recipe>
+		<recipe name="Calfling" count="1" craft_time="1200" craft_area="Cow" tags="learnable">
+			<ingredient name="Animal Feed" count="100"/>
+		</recipe>
+		<recipe name="Piglet" count="1" craft_time="600" craft_area="Pig" tags="learnable">
+			<ingredient name="Animal Feed" count="50"/>
+		</recipe>
+		<!-- Fuel/required -->
+		<recipe name="Animal Feed" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Wheat" count="3"/>
+		</recipe>
+		<recipe name="Animal Feed" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Flax Fiber" count="3"/>
+		</recipe>
+		<recipe name="Animal Feed" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Sunflower Seed" count="3"/>
+		</recipe>
+		<recipe name="Animal Feed" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="foodCropCorn" count="3"/>
+		</recipe>
+		<recipe name="Animal Bedding" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="Flax Fiber" count="1"/>
+		</recipe>
+		<recipe name="Animal Bedding" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="resourceYuccaFibers" count="100"/>
+		</recipe>
+		<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									Raw Processing Recipes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+		<!-- Processing -->
+		<recipe name="Sugar" count="1" craft_time="5" craft_area="Grain Processor">
+			<ingredient name="Sugarcane Stalk" count="2"/>
+		</recipe>
+		<recipe name="Flour" count="1" craft_time="5" craft_area="Grain Processor">
+			<ingredient name="Wheat" count="2"/>
+		</recipe>
+		<recipe name="Flour" count="1" craft_time="5" craft_area="Grain Processor">
+			<ingredient name="foodCropCorn" count="2"/>
+		</recipe>
+		<recipe name="resourcePaper" count="1" craft_time="2" craft_area="Grain Processor">
+			<ingredient name="Hemp" count="2"/>
+		</recipe>
+		<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									Stage 2 Processing Recipes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+		<recipe name="Dough" count="1" craft_time="15" craft_area="Grain Processor">
+			<ingredient name="Flour" count="3"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="foodEgg" count="1"/>
+			<ingredient name="Milk" count="1"/>
+		</recipe>
+		
+		<recipe name="Raw Pasta" count="1" craft_time="15" craft_area="Grain Processor">
+			<ingredient name="Dough" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		
+		<recipe name="Butter" count="1" craft_time="25" craft_area="Dairy Churn">
+			<ingredient name="Cream" count="2"/>
+			<ingredient name="Salt" count="2"/>
+		</recipe>
+		
+		<recipe name="Cream" count="1" craft_time="15" craft_area="Dairy Churn">
+			<ingredient name="Milk" count="3"/>
+			<ingredient name="Sugar" count="5"/>
+		</recipe>
+		
+		<recipe name="Cheese" count="1" craft_time="60" craft_area="Dairy Churn">
+			<ingredient name="Milk" count="3"/>
+			<ingredient name="Salt" count="5"/>
+		</recipe>
+		
+		<recipe name="Cream Cheese" count="1" craft_time="15" craft_area="Dairy Churn">
+			<ingredient name="Cream" count="1"/>
+			<ingredient name="Cheese" count="1"/>
+		</recipe>
+		
+		<recipe name="Bagel" count="1" craft_time="60" craft_area="Oven" craft_tool="toolCookingPot">
+			<ingredient name="Dough" count="1"/>
+			<ingredient name="drinkJarRiverWater" count="1"/>
+		</recipe>
+		
+		<recipe name="Bread" count="1" craft_time="60" craft_area="Oven">
+			<ingredient name="Dough" count="1"/>
+			<ingredient name="Butter" count="1"/>
+		</recipe>
+		
+		<recipe name="Apple Sauce" count="1" craft_time="15" craft_area="Grain Processor">
+			<ingredient name="Apples" count="5"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		
+		<recipe name="GrandMa's Famous Sauce" count="60" craft_time="1" craft_area="Oven">
+			<ingredient name="Tomatoes" count="1"/>
+			<ingredient name="Herbs" count="1"/>
+			<ingredient name="Raw Ground Beef" count="1"/>
+			<ingredient name="Raw Sausage Link" count="1"/>
+		</recipe>
+		
+		<recipe name="Raw Ground Beef" count="1" craft_time="15" craft_area="Butcher Table">
+			<ingredient name="Raw Beef" count="10"/>
+		</recipe>
+		
+		<recipe name="Raw Steak" count="1" craft_time="20" craft_area="Butcher Table">
+			<ingredient name="Raw Beef" count="25"/>
+		</recipe>
+		
+		<recipe name="Raw Kobe Beef" count="1" craft_time="30" craft_area="Butcher Table">
+			<ingredient name="Raw Beef" count="100"/>
+		</recipe>
+		
+		<recipe name="Raw Sausage Link" count="1" craft_time="10" craft_area="Butcher Table">
+			<ingredient name="Raw Pork" count="1"/>
+			<ingredient name="Herbs" count="5"/>
+			<ingredient name="Spices" count="5"/>
+		</recipe>
+		
+		<recipe name="Raw Ham" count="1" craft_time="30" craft_area="Butcher Table">
+			<ingredient name="Raw Pork" count="25"/>
+		</recipe>
+		
+		<recipe name="Raw Bacon" count="1" craft_time="5" craft_area="Butcher Table">
+			<ingredient name="Raw Pork" count="40"/>
+		</recipe>
+		
+		<recipe name="Raw Chicken Breast" count="1" craft_time="5" craft_area="Butcher Table">
+			<ingredient name="Raw Chicken" count="1"/>
+		</recipe>
+		
+		<recipe name="Raw Chicken Legs and Wings" count="1" craft_time="10" craft_area="Butcher Table">
+			<ingredient name="Raw Chicken" count="5"/>
+		</recipe>
+		<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									Natural/Healthy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->		
+		<recipe name="Dried Fruit" count="1" craft_time="120" craft_area="Oven">
+			<ingredient name="Grapes" count="1"/>
+			<ingredient name="Strawberries" count="1"/>
+			<ingredient name="Apples" count="1"/>
+			<ingredient name="foodCropBlueberries" count="1"/>
+		</recipe>
+		
+		<recipe name="Trail Mix" count="1" craft_time="180">
+			<ingredient name="Dried Fruit" count="1"/>
+			<ingredient name="Nuts" count="1"/>
+			<ingredient name="Sunflower Seed" count="1"/>
+		</recipe>
+		
+		<recipe name="Fruit Salad" count="1" craft_time="180">
+			<ingredient name="Grapes" count="1"/>
+			<ingredient name="Strawberries" count="1"/>
+			<ingredient name="Apples" count="1"/>
+			<ingredient name="foodCropBlueberries" count="1"/>
+		</recipe>
+		
+		<recipe name="White Rice" count="1" craft_time="120" craft_area="Oven" craft_tool="toolCookingPot">
+			<ingredient name="Rice" count="3"/>
+			<ingredient name="drinkJarRiverWater" count="1"/>
+		</recipe>	
+		
+		<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									Meats
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+
+
+		<recipe name="Steak" count="1" craft_time="30" craft_area="Smoker" craft_tool="toolCookingGrill">
+			<ingredient name="Raw Steak" count="1"/>
+			<ingredient name="Butter" count="1"/>
+		</recipe>
+		
+		<recipe name="Bacon Meatloaf" count="1" craft_time="60" craft_area="Oven">
+			<ingredient name="Raw Bacon" count="1"/>
+			<ingredient name="foodEgg" count="1"/>
+			<ingredient name="Herbs" count="1"/>
+			<ingredient name="Raw Ground Beef" count="1"/>
+			<ingredient name="Butter" count="1"/>
+		</recipe>
+		
+		<recipe name="Hot Wings" count="1" craft_time="15" craft_area="Smoker" craft_tool="toolCookingGrill">
+			<ingredient name="Raw Chicken Legs and Wings" count="1"/>
+			<ingredient name="foodHoney" count="1"/>
+			<ingredient name="Jalapeno Pepper" count="1"/>
+			<ingredient name="Spices" count="1"/>
+		</recipe>
+		
+		<recipe name="Honey Glazed Ham" count="1" craft_time="180" craft_area="Smoker">
+			<ingredient name="Raw Ham" count="1"/>
+			<ingredient name="foodHoney" count="1"/>
+			<ingredient name="Butter" count="1"/>
+		</recipe>
+		<recipe name="Smoked Sausage" count="1" craft_time="15" craft_area="Smoker" craft_tool="toolCookingGrill">
+			<ingredient name="Raw Sausage Link" count="1"/>
+		</recipe>
+		
+		<recipe name="Kobe Beef" count="1" craft_time="180" craft_area="Oven">
+			<ingredient name="Raw Kobe Beef" count="1"/>
+		</recipe>
+		
+		<recipe name="BBQ Chicken Legs" count="1" craft_time="30" craft_area="Smoker" craft_tool="toolCookingGrill">
+			<ingredient name="Raw Chicken Legs and Wings" count="1"/>
+			<ingredient name="foodHoney" count="1"/>
+			<ingredient name="Herbs" count="1"/>
+			<ingredient name="Spices" count="1"/>
+		</recipe>
+		
+		<recipe name="Baked Chicken Breast" count="1" craft_time="15" craft_area="Oven">
+			<ingredient name="Raw Chicken Breast" count="1"/>
+			<ingredient name="Herbs" count="1"/>
+			<ingredient name="Tomatoes" count="1"/>
+			<ingredient name="foodCropPotato" count="1"/>
+		</recipe>	
+		<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									Sandwiches/Breakfast
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+		<recipe name="Cheese Burger" count="1" craft_time="30" craft_area="Smoker" craft_tool="toolCookingGrill">
+			<ingredient name="Raw Ground Beef" count="1"/>
+			<ingredient name="Cheese" count="1"/>
+			<ingredient name="Bread" count="1"/>
+			<ingredient name="Tomatoes" count="1"/>
+		</recipe>
+		
+		<recipe name="Breakfast Sausage Sandwich" count="1" craft_time="30" craft_area="Oven" craft_tool="toolCookingGrill">
+			<ingredient name="Raw Sausage Link" count="1"/>
+			<ingredient name="foodEgg" count="1"/>
+			<ingredient name="Bagel" count="1"/>
+			<ingredient name="Cheese" count="1"/>
+			<ingredient name="Butter" count="1"/>
+		</recipe>
+		
+		<recipe name="Breakfast Bacon Sandwich" count="1" craft_time="30" craft_area="Oven" craft_tool="toolCookingGrill">
+			<ingredient name="Raw Bacon" count="1"/>
+			<ingredient name="foodEgg" count="1"/>
+			<ingredient name="Bagel" count="1"/>
+			<ingredient name="Cheese" count="1"/>
+			<ingredient name="Butter" count="1"/>
+		</recipe>
+
+		<recipe name="Cereal" count="1" craft_time="10">
+			<ingredient name="Wheat" count="1"/>
+			<ingredient name="Flax" count="1"/>
+			<ingredient name="Milk" count="1"/>
+		</recipe>
+		
+		<recipe name="Bagel and Cream Cheese" count="1" craft_time="10">
+			<ingredient name="Bagel" count="1"/>
+			<ingredient name="Cream Cheese" count="1"/>
+		</recipe>
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									Deserts
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+
+		<recipe name="Ice Cream" count="1" craft_time="60" craft_area="Dairy Churn">
+			<ingredient name="resourceSnowBall" count="1"/>
+			<ingredient name="Cream" count="1"/>
+			<ingredient name="Sugar" count="5"/>
+		</recipe>
+		
+		<recipe name="Apple Pie" count="1" craft_time="180" craft_area="Oven">
+			<ingredient name="Apples" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="Sugar" count="1"/>
+			<ingredient name="Dough" count="1"/>
+			<ingredient name="Butter" count="1"/>
+		</recipe>
+		
+		<recipe name="Cookie" count="1" craft_time="120" craft_area="Oven">
+			<ingredient name="Dough" count="2"/>
+			<ingredient name="Butter" count="2"/>
+			<ingredient name="Sugar" count="5"/>
+			<ingredient name="Milk" count="1"/>
+		</recipe>
+	
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									Dinners
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+		<recipe name="Pizza" count="1" craft_time="45" craft_area="Oven" craft_tool="toolCookingPot">
+			<ingredient name="Dough" count="1"/>
+			<ingredient name="GrandMa's Famous Sauce" count="1"/>
+			<ingredient name="Raw Sausage Link" count="1"/>
+			<ingredient name="Cheese" count="1"/>
+		</recipe>
+		
+		<recipe name="Fried Rice" count="1" craft_time="180" craft_area="Oven">
+			<ingredient name="White Rice" count="3"/>
+			<ingredient name="Raw Chicken Breast" count="1"/>
+			<ingredient name="Raw Kobe Beef" count="1"/>
+			<ingredient name="Herbs" count="1"/>
+		</recipe>
+		
+		<recipe name="Pasta" count="1" craft_time="15" craft_area="Oven" craft_tool="toolCookingPot">
+			<ingredient name="Raw Pasta" count="1"/>
+			<ingredient name="GrandMa's Famous Sauce" count="1"/>
+		</recipe>
+		
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									Drinks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+		
+		<recipe name="Wine" count="1" craft_time="300" craft_area="Wine Cask">
+			<ingredient name="Grapes" count="10"/>
+			<ingredient name="drinkJarRiverWater" count="4"/>
+		</recipe>
+		
+		<recipe name="Hard Apple Cider" count="1" craft_time="300" craft_area="Wine Cask">
+			<ingredient name="Apples" count="20"/>
+			<ingredient name="drinkJarRiverWater" count="4"/>
+		</recipe>
+		
+		<recipe name="Fermented Juice" count="1" craft_time="180" craft_area="Wine Cask">
+			<ingredient name="Grapes" count="5"/>
+			<ingredient name="Apples" count="5"/>
+			<ingredient name="Strawberries" count="5"/>
+			<ingredient name="foodCropBlueberries" count="5"/>
+		</recipe>
+		
+		
+		
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									Other/Misc
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->	
+		
+		<recipe name="Shooting Bottle" count="1" craft_time="1" craft_area="Farm Table">
+			<ingredient name="resourceBrokenGlass" count="1"/>
+		</recipe>
+	</append>
+</configs>
