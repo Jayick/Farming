@@ -66,11 +66,14 @@
 			<passive_effect name="StaminaLoss" operation="base_add" value="15" tags="primary,secondary"/>
 			<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.2" tags="primary,secondary" />
 					<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="self" buff="buffPuking1">
-									<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="15"/>
+									<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="25"/>
 									<requirement name="HasBuff" buff="buffDrunky"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffRemove" action="Ragdoll" target="self" duration="3">
-									<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="15"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.4" fade=".8" effect_name="Drunk"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity=".2" fade=".8" effect_name="Drunk"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" effect_name="Drunk"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="Ragdoll" target="self" duration="3">
+									<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="2"/>
 									<requirement name="HasBuff" buff="buffDrunky"/>
 					</triggered_effect>
 					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffHotWings,buffNightTime,buffRiseAndShine,buffHealthy,buffAllNatural,buffIScream">
