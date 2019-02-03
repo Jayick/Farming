@@ -1611,7 +1611,7 @@
 				<property name="Create_item" value="drinkJarEmpty"/></property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffDrunky">
-						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="25"/>
+						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="75"/>
 					</triggered_effect>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffBeer">
 						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="25"/>
@@ -1641,10 +1641,10 @@
 				<property name="Create_item" value="drinkJarEmpty"/></property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffDrunky">
-						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="50"/>
+						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="75"/>
 					</triggered_effect>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffBeer">
-						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="25"/>
+						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="50"/>
 					</triggered_effect>
 			</effect_group>
 			<effect_group tiered="false">
@@ -1671,10 +1671,10 @@
 				<property name="Create_item" value="drinkJarEmpty"/></property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffDrunky">
-						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="25"/>
+						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="100"/>
 					</triggered_effect>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffBeer">
-						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="50"/>
+						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="75"/>
 					</triggered_effect>
 			</effect_group>
 			<effect_group tiered="false">
@@ -1943,28 +1943,10 @@
 		
 <!--
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-									Quests
+									Quests: Removed so I don't fuck up your saved data when I update, because I most likely would if I left this tutorial quest in
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -->
-		<item name="Farming Quest">
-			<property name="CreativeMode" value="None"/>
-			<property name="HoldType" value="21"/>
-			<property name="Meshfile" value="Items/Misc/bookPrefab"/>
-			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-			<property name="Material" value="Mpaper"/>
-			<property name="CustomIcon" value="farmquest"/>
-			<property name="Stacknumber" value="50"/> <!-- STK book -->
-			<property name="EconomicValue" value="1"/>
-			<property name="SellableToTrader" value="false"/>
-			<property class="Action0">
-				<property name="Class" value="Quest"/>
-				<property name="QuestGiven" value="Farming Mod"/>
-				<property name="Delay" value="0"/>
-			</property>
-			<property name="FuelValue" value="2"/>
-			<property name="Weight" value="2"/>
-			<property name="Group" value="Special Items"/>
-		</item>
+		
 	</append>
 <!--
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
