@@ -1693,8 +1693,8 @@
 			<property name="CustomIcon" value="pitchfork"/>
 			<property name="HoldType" value="50"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Pitchfork.unity3d?PitchforkPrefab"/>
-			<property name="Material" value="Miron"/>
-			<property name="RepairTools" value="resourceForgedIron"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="ItemNeedsRepair"/>
 			<property name="SoundDestroy" value="wooddestroy1"/>
@@ -1747,7 +1747,7 @@
 			<property name="Meshfile" value="#@modfolder:Resources/FryingPan.unity3d?FryingPanPrefab"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="CustomIcon" value="fryingpan"/>
-			<property name="RepairTools" value="resourceForgedSteel"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="EconomicValue" value="50"/>
 			<property name="SoundJammed" value="ItemNeedsRepair"/>
@@ -1809,7 +1809,7 @@
 			<property name="DisplayType" value="melee"/>
 			<property name="HoldType" value="47"/>
 			<property name="CustomIcon" value="butcher"/>
-			<property name="RepairTools" value="resourceForgedSteel"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="ItemNeedsRepair"/>
 			<property name="SoundDestroy" value="metaldestroy1"/>
@@ -1864,7 +1864,7 @@
 			<property name="HoldType" value="50"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Scythe.unity3d?ScythePrefab"/>
 			<property name="CustomIcon" value="scythe"/>
-			<property name="RepairTools" value="resourceForgedSteel"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="EconomicValue" value="50"/>
 			<property name="SoundJammed" value="ItemNeedsRepair"/>
