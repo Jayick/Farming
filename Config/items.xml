@@ -44,6 +44,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -101,6 +102,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -143,6 +145,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -171,6 +174,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -227,6 +231,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -283,6 +288,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -468,6 +474,7 @@
 			<property name="Group" value="Oven"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -508,6 +515,7 @@
 			<property name="Group" value="Oven"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -562,6 +570,7 @@
 			<property name="Group" value="Dairy"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -586,6 +595,7 @@
 			<property name="Group" value="Dairy"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -611,6 +621,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -652,6 +663,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -681,6 +693,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -710,6 +723,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -739,6 +753,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -768,6 +783,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -797,6 +813,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -826,6 +843,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -855,6 +873,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -879,7 +898,6 @@
 -->
 		<item name="Animal Feed">
 			<property name="HoldType" value="45"/>
-			<property name="DisplayType" value="food"/>
 			<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="CustomIcon" value="foodCornMeal"/>
@@ -903,7 +921,7 @@
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
-				<property name="Sound_start" value="player_eating"/></property>
+				<property name="Sound_start" value="player_drinking"/></property>
 			<property name="Group" value="Food/Cooking,All"/>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodAmount" operation="add" value="5"/>
@@ -932,6 +950,7 @@
 			<property name="Group" value="Oven"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -959,6 +978,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -986,6 +1006,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1013,6 +1034,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1041,6 +1063,7 @@
 			<property name="Group" value="Smoker"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1068,6 +1091,7 @@
 			<property name="Group" value="Oven"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1095,6 +1119,7 @@
 			<property name="Group" value="Smoker"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1122,6 +1147,7 @@
 			<property name="Group" value="Smoker"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1149,6 +1175,7 @@
 			<property name="Group" value="Smoker"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1176,6 +1203,7 @@
 			<property name="Group" value="Oven"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1203,6 +1231,7 @@
 			<property name="Group" value="Smoker"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1230,6 +1259,7 @@
 			<property name="Group" value="Oven"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1258,6 +1288,7 @@
 			<property name="Group" value="Smoker"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1286,6 +1317,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1313,6 +1345,7 @@
 			<property name="Group" value="Food/Cooking"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1340,6 +1373,7 @@
 			<property name="Group" value="Oven"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1367,6 +1401,7 @@
 			<property name="Group" value="Oven"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1395,6 +1430,7 @@
 			<property name="Group" value="Dairy"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1422,6 +1458,7 @@
 			<property name="Group" value="Oven"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1450,6 +1487,7 @@
 			<property name="Group" value="Oven"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1478,6 +1516,7 @@
 			<property name="Group" value="Oven"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1505,6 +1544,7 @@
 			<property name="Group" value="Oven"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1532,6 +1572,7 @@
 			<property name="Group" value="Oven"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1561,6 +1602,7 @@
 			<property name="Weight" value="10"/>
 			<property name="Stacknumber" value="15"/>
 			<property name="EconomicValue" value="25"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="2"/>
@@ -1590,6 +1632,7 @@
 			<property name="Weight" value="10"/>
 			<property name="Stacknumber" value="15"/>
 			<property name="EconomicValue" value="25"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="2"/>
@@ -1619,6 +1662,7 @@
 			<property name="Weight" value="10"/>
 			<property name="Stacknumber" value="15"/>
 			<property name="EconomicValue" value="25"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="2"/>
@@ -1739,7 +1783,7 @@
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="metal"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="organic"/>
 				<passive_effect name="AttacksPerMinute" operation="base_set" value="90"/>
-				<passive_effect name="StaminaLoss" operation="base_set" value="6" tags="primary"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="9" tags="primary"/>
 				<passive_effect name="DegradationMax" operation="base_set" value="700,1100" tier="1,6"/>
 				<passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".15" tags="EntityDamage,BlockDamage"/>
@@ -1753,9 +1797,8 @@
 			<effect_group name="Power Attack">
 				<passive_effect name="EntityDamage" operation="base_set" value="0" tags="secondary"/>
 				<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
-				<passive_effect name="DismemberChance" operation="base_add" value=".2" tags="secondary"/>
 				<passive_effect name="AttacksPerMinute" operation="perc_subtract" value="0" tags="secondary"/>
-				<passive_effect name="StaminaLoss" operation="base_add" value="18" tags="secondary"/>
+				<passive_effect name="StaminaLoss" operation="base_add" value="35" tags="secondary"/>
 			</effect_group>
 		</item>
 		<item name="Butcher Knife">
