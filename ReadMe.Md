@@ -1,5 +1,15 @@
 # Farming Expansion Modlet (A17 full release)
 
+## Farming 1.01 update:
+Fix:
+- tools req steel for repair
+- food not displaying values
+- well
+Update:
+- buffs on drinks
+Known bug:
+- Frying pan right click enabled during pve. Dmg removed, stamina cost higher. Mechanic remaining for comedic value
+
 ## Requirements:
 Requires Alpha 17 version of 7 Days to Die. Will not work on A16.4 or lesser.
 
