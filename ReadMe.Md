@@ -5,8 +5,10 @@ Fix:
 - tools req steel for repair
 - food not displaying values
 - well
+
 Update:
 - buffs on drinks
+
 Known bug:
 - Frying pan right click enabled during pve. Dmg removed, stamina cost higher. Mechanic remaining for comedic value
 
