@@ -1,5 +1,5 @@
 <configs>
-	<append xpath="/xui/ruleset[@name='default']" >
+	<append xpath="/xui/ruleset" >
 
 		<window_group name="workstation_Farm Table" controller="XUiC_WorkstationWindowGroup">
 			<window name="windowCraftingList"/>
@@ -65,7 +65,7 @@
 			<window name="windowNonPagingHeader" />
 		</window_group>
 		
-		<window_group name="workstation_Smoker" controller="XUiC_WorkstationWindowGroup">	
+		<window_group name="workstation_Rustic Smoker" controller="XUiC_WorkstationWindowGroup">	
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
 			<window name="windowCraftingQueue"/>
@@ -75,7 +75,7 @@
 			<window name="windowNonPagingHeader" />
 		</window_group>
 		
-		<window_group name="workstation_Grill" controller="XUiC_WorkstationWindowGroup">
+		<window_group name="workstation_Webber Grill" controller="XUiC_WorkstationWindowGroup">
 			<window name="windowCraftingList"/>
 			<window name="windowToolsCampfire" />
 			<window name="craftingInfoPanel"/>

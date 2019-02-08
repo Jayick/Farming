@@ -8,7 +8,7 @@
 		<item name="Seed Pack">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="seedpack"/>
+			<property name="CustomIcon" value="7seedpack"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -21,7 +21,7 @@
 		<item name="Sugarcane Stalk">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="sugarcanestalk"/>
+			<property name="CustomIcon" value="7sugarcanestalk"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -34,9 +34,10 @@
 		<!-- Sunflower -->
 		<item name="Sunflower Seed">
 			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="sunflowers"/>
-			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Meshfile" value="#@modfolder:Resources/SunflowerSeeds.unity3d?SunflowerSeeds"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/SunflowerSeeds.unity3d?SunflowerSeeds"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7sunflowers"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -51,6 +52,14 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
 			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffFresh"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
@@ -61,10 +70,10 @@
 			</effect_group>
 		</item>
 		<!-- Wheat -->
-		<item name="Wheat">
+		<item name="Whole Wheat">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="wheatitem"/>
+			<property name="CustomIcon" value="7wheatitem"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -78,7 +87,7 @@
 		<item name="Hemp">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="hemp"/>
+			<property name="CustomIcon" value="7hemp"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -90,11 +99,12 @@
 			<property name="CraftingIngredientTime" value="1"/>
 		</item>
 		<!-- Grapes -->
-		<item name="Grapes">
+		<item name="Vineyard Grapes">
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Grape.unity3d?GrapeFoodPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/Grape.unity3d?GrapeFoodPrefab"/>
-			<property name="CustomIcon" value="grape"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7grape"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -108,6 +118,14 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
 			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffFresh"/>
@@ -122,7 +140,7 @@
 		<item name="Flax Fiber">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="trumpshair"/>
+			<property name="CustomIcon" value="7trumpshair"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -137,7 +155,8 @@
 			<property name="HoldType" value="14"/>
 			<property name="Meshfile" value="#@modfolder:Resources/JalapenoFood.unity3d?JalapenoFoodPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/JalapenoFood.unity3d?JalapenoFoodPrefab"/>
-			<property name="CustomIcon" value="jalapepper"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7jalapepper"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -151,6 +170,14 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
 			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffFresh"/>
@@ -162,11 +189,12 @@
 			</effect_group>
 		</item>
 		<!-- Tomato -->
-		<item name="Tomatoes">
+		<item name="Heirloom Tomatoes">
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/TomatoFood.unity3d?TomatoFoodPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/TomatoFood.unity3d?TomatoFoodPrefab"/>
-			<property name="CustomIcon" value="tomato"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7tomato"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -181,6 +209,14 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
 			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffFresh"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
@@ -191,12 +227,13 @@
 			</effect_group>
 		</item>
 		<!-- Apple -->
-		<item name="Apples">
+		<item name="Red Apples">
 			<property name="HoldType" value="23"/>
 			<property name="DisplayType" value="food"/>
-			<property name="CustomIcon" value="apple"/>
+			<property name="CustomIcon" value="7apple"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Apple.unity3d?ApplePrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/Apple.unity3d?ApplePrefab"/>
+			<property name="DropScale" value="6"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -206,6 +243,14 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="applecrunch"/></property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
@@ -223,7 +268,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/StrawberryFood.unity3d?StrawberryPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/StrawberryFood.unity3d?StrawberryPrefab"/>
-			<property name="CustomIcon" value="strawberry"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7strawberry"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -237,6 +283,14 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
 			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffFresh"/>
@@ -251,7 +305,7 @@
 		<item name="Herbs">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="herbs1"/>
+			<property name="CustomIcon" value="7herbs1"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -265,7 +319,7 @@
 		<item name="Spices">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="spices"/>
+			<property name="CustomIcon" value="7spices"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -280,7 +334,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Nut.unity3d?NutPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/Nut.unity3d?NutPrefab"/>
-			<property name="CustomIcon" value="nuts"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7nuts"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -295,6 +350,14 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
 			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffFresh"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
@@ -308,7 +371,7 @@
 		<item name="Rice">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="rice"/>
+			<property name="CustomIcon" value="7rice"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -328,7 +391,8 @@
 			<property name="DisplayType" value="food"/>
 			<property name="Meshfile" value="#@modfolder:Resources/RawMeat.unity3d?RawMeatPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/RawMeat.unity3d?RawMeatPrefab"/>
-			<property name="CustomIcon" value="rawpork"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7rawpork"/>
 			<property name="Material" value="MfoodRawMeat"/>
 			<property name="Stacknumber" value="5000"/>
 			<property name="EconomicValue" value="2"/>
@@ -355,7 +419,8 @@
 			<property name="DisplayType" value="food"/>
 			<property name="Meshfile" value="#@modfolder:Resources/RawMeat.unity3d?RawMeatPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/RawMeat.unity3d?RawMeatPrefab"/>
-			<property name="CustomIcon" value="rawbeef"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7rawbeef"/>
 			<property name="Material" value="MfoodRawMeat"/>
 			<property name="Stacknumber" value="5000"/>
 			<property name="EconomicValue" value="2"/>
@@ -382,7 +447,8 @@
 			<property name="DisplayType" value="food"/>
 			<property name="Meshfile" value="#@modfolder:Resources/RawMeat.unity3d?RawMeatPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/RawMeat.unity3d?RawMeatPrefab"/>
-			<property name="CustomIcon" value="rawchicken"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7rawchicken"/>
 			<property name="Material" value="MfoodRawMeat"/>
 			<property name="Stacknumber" value="5000"/>
 			<property name="EconomicValue" value="2"/>
@@ -413,7 +479,7 @@
 		<item name="Flour">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="flour"/>
+			<property name="CustomIcon" value="7flour"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -426,7 +492,7 @@
 		<item name="Sugar">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="sugaritem"/>
+			<property name="CustomIcon" value="7sugaritem"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -436,10 +502,10 @@
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
 		</item>
-		<item name="Salt">
+		<item name="Old Salt">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="salt"/>
+			<property name="CustomIcon" value="7salt"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -452,7 +518,7 @@
 		<item name="Dough">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="dough"/>
+			<property name="CustomIcon" value="7dough"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -466,7 +532,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Bread.unity3d?BreadPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/Bread.unity3d?BreadPrefab"/>
-			<property name="CustomIcon" value="bread"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7bread"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -480,6 +547,14 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
 			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffCarb"/>
@@ -493,7 +568,7 @@
 		<item name="Raw Pasta">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="rawpasta"/>
+			<property name="CustomIcon" value="7rawpasta"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -507,7 +582,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Bagel.unity3d?BagelPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/Bagel.unity3d?BagelPrefab"/>
-			<property name="CustomIcon" value="bagel"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7bagel"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -522,6 +598,14 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
 			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffCarb"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="20"/>
@@ -532,10 +616,10 @@
 			</effect_group>
 		</item>
 		<!-- Dairy -->
-		<item name="Butter">
+		<item name="Fresh Butter">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="butter"/>
+			<property name="CustomIcon" value="7butter"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -548,7 +632,7 @@
 		<item name="Cream">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="cream"/>
+			<property name="CustomIcon" value="7cream"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -561,7 +645,7 @@
 		<item name="Cheese">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="cheese"/>
+			<property name="CustomIcon" value="7cheese"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -586,7 +670,7 @@
 		<item name="Cream Cheese">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="creamcheese"/>
+			<property name="CustomIcon" value="7creamcheese"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -612,7 +696,7 @@
 		<item name="Apple Sauce">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="applesauce"/>
+			<property name="CustomIcon" value="7applesauce"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -640,7 +724,7 @@
 		<item name="GrandMa's Famous Sauce">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="tomatosauce"/>
+			<property name="CustomIcon" value="7tomatosauce"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -655,7 +739,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/RawBeef.unity3d?RawBeefPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/RawBeef.unity3d?RawBeefPrefab"/>
-			<property name="CustomIcon" value="rawgroundbeef"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7rawgroundbeef"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -685,7 +770,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/RawBeef.unity3d?RawBeefPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/RawBeef.unity3d?RawBeefPrefab"/>
-			<property name="CustomIcon" value="rawsteak"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7rawsteak"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -715,7 +801,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/RawBeef.unity3d?RawBeefPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/RawBeef.unity3d?RawBeefPrefab"/>
-			<property name="CustomIcon" value="rawkobe"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7rawkobe"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -745,7 +832,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/RawMeat.unity3d?RawMeatPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/RawMeat.unity3d?RawMeatPrefab"/>
-			<property name="CustomIcon" value="rsaus"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7rsaus"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -775,7 +863,8 @@
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Ham.unity3d?HamPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/Ham.unity3d?HamPrefab"/>
-			<property name="CustomIcon" value="rham"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7rham"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -805,7 +894,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Bacon.unity3d?BaconPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/Bacon.unity3d?BaconPrefab"/>
-			<property name="CustomIcon" value="rawbacon"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7rawbacon"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -835,7 +925,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/WholeChicken.unity3d?WholeChickenPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/WholeChicken.unity3d?WholeChickenPrefab"/>
-			<property name="CustomIcon" value="rchic"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7rchic"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -865,7 +956,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/RawMeat.unity3d?RawMeatPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/RawMeat.unity3d?RawMeatPrefab"/>
-			<property name="CustomIcon" value="rawchicl"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7rawchicl"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -908,12 +1000,13 @@
 			<property name="EconomicValue" value="10"/>
 			<property name="Group" value="Animals,All"/>
 		</item>
-		<item name="Milk">
+		<item name="Fresh Milk" desc="Test">
 			<property name="HoldType" value="3"/>
-			<property name="DisplayType" value="food"/>
+			<property name="DisplayType" value="foodWater"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Milk.unity3d?MilkPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/Milk.unity3d?MilkPrefab"/>
-			<property name="CustomIcon" value="Milk"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7Milk"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Stacknumber" value="500"/>
 			<property name="EconomicValue" value="10"/>
@@ -922,6 +1015,14 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_drinking"/></property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
 			<property name="Group" value="Food/Cooking,All"/>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodAmount" operation="add" value="5"/>
@@ -941,7 +1042,7 @@
 		<item name="Dried Fruit">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="driedfruit"/>
+			<property name="CustomIcon" value="7driedfruit"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -970,7 +1071,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/SunflowerSeeds.unity3d?SunflowerSeeds"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/SunflowerSeeds.unity3d?SunflowerSeeds"/>
-			<property name="CustomIcon" value="trailmix"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7trailmix"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -985,6 +1087,14 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
 			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffOneWithNature"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
@@ -997,7 +1107,7 @@
 		<item name="Fruit Salad">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="fruitsalad"/>
+			<property name="CustomIcon" value="7fruitsalad"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
@@ -1026,7 +1136,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/WhiteRice.unity3d?WhiteRicePrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/WhiteRice.unity3d?WhiteRicePrefab"/>
-			<property name="CustomIcon" value="whiterice"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7whiterice"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1041,6 +1152,14 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
 			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffHealthy"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
@@ -1051,11 +1170,12 @@
 			</effect_group>
 		</item>
 <!-- Meats -->
-		<item name="Steak">
+		<item name="Fresh Steak">
 			<property name="HoldType" value="23"/>
-			<property name="Meshfile" value="#@modfolder:Resources/Steak.unity3d?SteakPrefab"/>
-			<property name="DropMeshfile" value="#@modfolder:Resources/Steak.unity3d?SteakPrefab"/>
-			<property name="CustomIcon" value="steakcooked"/>
+			<property name="Meshfile" value="#@modfolder:Resources/CookedMeat.unity3d?CookedMeatPrefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/CookedMeat.unity3d?CookedMeatPrefab"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7steakcooked"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1069,6 +1189,14 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
 			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffAllNatural"/>
@@ -1079,12 +1207,13 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
-		<item name="Bacon Meatloaf">
+		<item name="Fresh Bacon Meatloaf">
 			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-			<property name="CustomIcon" value="meatloaf"/>
-			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="CustomIcon" value="7meatloaf"/>
 			<property name="Material" value="Morganic"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Steak.unity3d?SteakPrefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/Steak.unity3d?SteakPrefab"/>
+			<property name="DropScale" value="6"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
 			<property name="EconomicValue" value="5"/>
@@ -1097,6 +1226,14 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
 			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffBeefcake"/>
@@ -1107,11 +1244,12 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
-		<item name="Hot Wings">
+		<item name="Spicy Hot Wings">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#@modfolder:Resources/ChickenLeg.unity3d?ChickenLegPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/ChickenLeg.unity3d?ChickenLegPrefab"/>
-			<property name="CustomIcon" value="hotwings"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7hotwings"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1125,6 +1263,14 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
 			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="80"/>
@@ -1135,11 +1281,12 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
-		<item name="Honey Glazed Ham">
+		<item name="Fresh Honey Glazed Ham">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Ham.unity3d?HamPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/Ham.unity3d?HamPrefab"/>
-			<property name="CustomIcon" value="honeyham"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7honeyham"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1153,6 +1300,14 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
 			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffStuffed"/>
@@ -1163,11 +1318,12 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
-		<item name="Smoked Sausage">
+		<item name="Fresh Smoked Sausage">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Sausage.unity3d?SausagePrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/Sausage.unity3d?SausagePrefab"/>
-			<property name="CustomIcon" value="smokedsausage"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7smokedsausage"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1181,6 +1337,14 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
 			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffStuffed"/>
@@ -1191,11 +1355,12 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
-		<item name="Kobe Beef">
+		<item name="Fresh Kobe Beef">
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Steak.unity3d?SteakPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/Steak.unity3d?SteakPrefab"/>
-			<property name="CustomIcon" value="kobebeef"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7kobebeef"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1210,6 +1375,14 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
 			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="100"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="100"/>
@@ -1219,11 +1392,12 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
-		<item name="BBQ Chicken Legs">
+		<item name="Fresh BBQ Chicken Legs">
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#@modfolder:Resources/ChickenLeg.unity3d?ChickenLegPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/ChickenLeg.unity3d?ChickenLegPrefab"/>
-			<property name="CustomIcon" value="bbqchicken"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7bbqchicken"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1238,6 +1412,14 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
 			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffStuffed"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="30"/>
@@ -1247,11 +1429,12 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
-		<item name="Baked Chicken Breast">
+		<item name="Fresh Baked Chicken Breast">
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/WholeChicken.unity3d?WholeChickenPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/WholeChicken.unity3d?WholeChickenPrefab"/>
-			<property name="CustomIcon" value="bakedchicken"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7bakedchicken"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1265,6 +1448,14 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
 			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffHealthy"/>
@@ -1276,11 +1467,12 @@
 			</effect_group>
 		</item>
 <!-- Sandwiches -->
-		<item name="Cheese Burger">
+		<item name="Fresh Cheese Burger">
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Burger.unity3d?BurgerPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/Burger.unity3d?BurgerPrefab"/>
-			<property name="CustomIcon" value="burger"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7burger"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1294,6 +1486,14 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
 			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="65"/>
@@ -1309,7 +1509,8 @@
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Cereal.unity3d?CerealPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/Cereal.unity3d?CerealPrefab"/>
-			<property name="CustomIcon" value="cereal"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7cereal"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1323,6 +1524,14 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
 			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="80"/>
@@ -1337,7 +1546,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Bagel.unity3d?BagelPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/Bagel.unity3d?BagelPrefab"/>
-			<property name="CustomIcon" value="bagelandcreamcheese"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7bagelandcreamcheese"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1352,6 +1562,14 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
 			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffRiseAndShine"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="25"/>
@@ -1365,7 +1583,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Breakfast.unity3d?BreakfastPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/Breakfast.unity3d?BreakfastPrefab"/>
-			<property name="CustomIcon" value="bss"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7bss"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1380,6 +1599,14 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
 			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffStuffed"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="45"/>
@@ -1393,7 +1620,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Breakfast.unity3d?BreakfastPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/Breakfast.unity3d?BreakfastPrefab"/>
-			<property name="CustomIcon" value="bbs"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7bbs"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1407,6 +1635,14 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
 			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffStuffed"/>
@@ -1422,7 +1658,8 @@
 			<property name="HoldType" value="14"/>
 			<property name="Meshfile" value="#@modfolder:Resources/IceCream.unity3d?IceCreamPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/IceCream.unity3d?IceCreamPrefab"/>
-			<property name="CustomIcon" value="icecream"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7icecream"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1437,6 +1674,14 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
 			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="20"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="20"/>
@@ -1446,11 +1691,12 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
-		<item name="Apple Pie">
+		<item name="Warm Apple Pie">
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/ApplePie.unity3d?ApplePiePrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/ApplePie.unity3d?ApplePiePrefab"/>
-			<property name="CustomIcon" value="applepie"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7applepie"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1464,6 +1710,14 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
 			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffFatty"/>
@@ -1479,7 +1733,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Cookie.unity3d?CookiePrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/Cookie.unity3d?CookiePrefab"/>
-			<property name="CustomIcon" value="cookie"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7cookie"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1493,6 +1748,14 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
 			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffNightTime"/>
@@ -1508,7 +1771,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Pizza.unity3d?PizzaPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/Pizza.unity3d?PizzaPrefab"/>
-			<property name="CustomIcon" value="pizza"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7pizza"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1522,6 +1786,14 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
 			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffStuffed"/>
@@ -1536,7 +1808,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/FriedRice.unity3d?FriedRicePrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/FriedRice.unity3d?FriedRicePrefab"/>
-			<property name="CustomIcon" value="friedrice"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7friedrice"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1551,6 +1824,14 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
 			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="100"/>
@@ -1564,7 +1845,8 @@
 			<property name="HoldType" value="23"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Pasta.unity3d?PastaPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/Pasta.unity3d?PastaPrefab"/>
-			<property name="CustomIcon" value="pasta"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7pasta"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1578,6 +1860,14 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
 			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="30"/>
@@ -1595,20 +1885,29 @@
 		<item name="Wine">
 			<property name="HoldType" value="3"/>
 			<property name="Group" value="Food/Cooking"/>
-			<property name="CustomIcon" value="wine"/>
+			<property name="CustomIcon" value="7wine"/>
 			<property name="Meshfile" value="#@modfolder:Resources/WineBottle2.unity3d?WineBottlePrefab2"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/WineBottle2.unity3d?WineBottlePrefab2"/>
+			<property name="DropScale" value="6"/>
 			<property name="Material" value="Mglass"/>
 			<property name="Weight" value="10"/>
 			<property name="Stacknumber" value="15"/>
 			<property name="EconomicValue" value="25"/>
-			<property name="DisplayType" value="food"/>
+			<property name="DisplayType" value="foodWater"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="2"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_drinking"/>
 				<property name="Create_item" value="drinkJarEmpty"/></property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffDrunky">
 						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="75"/>
@@ -1625,20 +1924,29 @@
 		<item name="Hard Apple Cider">
 			<property name="HoldType" value="3"/>
 			<property name="Group" value="Food/Cooking"/>
-			<property name="CustomIcon" value="hardcider"/>
+			<property name="CustomIcon" value="7hardcider"/>
 			<property name="Meshfile" value="#@modfolder:Resources/WineBottle3.unity3d?WineBottlePrefab3"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/WineBottle3.unity3d?WineBottlePrefab3"/>
+			<property name="DropScale" value="6"/>
 			<property name="Material" value="Mglass"/>
 			<property name="Weight" value="10"/>
 			<property name="Stacknumber" value="15"/>
 			<property name="EconomicValue" value="25"/>
-			<property name="DisplayType" value="food"/>
+			<property name="DisplayType" value="foodWater"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="2"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_drinking"/>
 				<property name="Create_item" value="drinkJarEmpty"/></property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffDrunky">
 						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="75"/>
@@ -1655,20 +1963,29 @@
 		<item name="Fermented Juice">
 			<property name="HoldType" value="3"/>
 			<property name="Group" value="Food/Cooking"/>
-			<property name="CustomIcon" value="ferjuice"/>
+			<property name="CustomIcon" value="7ferjuice"/>
 			<property name="Meshfile" value="#@modfolder:Resources/WineBottle.unity3d?WineBottlePrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/WineBottle.unity3d?WineBottlePrefab"/>
+			<property name="DropScale" value="6"/>
 			<property name="Material" value="Mglass"/>
 			<property name="Weight" value="10"/>
 			<property name="Stacknumber" value="15"/>
 			<property name="EconomicValue" value="25"/>
-			<property name="DisplayType" value="food"/>
+			<property name="DisplayType" value="foodWater"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="2"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_drinking"/>
 				<property name="Create_item" value="drinkJarEmpty"/></property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffDrunky">
 						<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="100"/>
@@ -1690,9 +2007,10 @@
 		<item name="Pitchfork">
 			<property name="Tags" value="melee,medium,tool,shovel,perkDeepCuts,perkMotherLode"/>
 			<property name="DisplayType" value="melee"/>
-			<property name="CustomIcon" value="pitchfork"/>
+			<property name="CustomIcon" value="7pitchfork"/>
 			<property name="HoldType" value="50"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Pitchfork.unity3d?PitchforkPrefab"/>
+			<property name="DropScale" value="6"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="RepairTools" value="resourceScrapIron"/>
 			<property name="DegradationBreaksAfter" value="false"/>
@@ -1712,7 +2030,7 @@
 				<property name="Repair_amount" value="30"/>
 				<property name="Upgrade_hit_offset" value="-4"/>
 				<property name="Sound_start" value="repair_block"/>
-				<property name="Delay" value="1.3"/>
+				<property name="Delay" value=".5"/>
 				<property name="Upgrade_action_sound" value="ImpactSurface/metalhitearth"/>
 				<property name="Allowed_upgrade_items" value="Pitchfork"/>
 				<property name="UsePowerAttackAnimation" value="true"/></property>
@@ -1740,13 +2058,14 @@
 			<property name="RepairExpMultiplier" value="5.5"/>
 			<property name="DescriptionKey" value="Pitchfork"/>
 		</item>
-		<item name="Frying Pan">
+		<item name="Rusty Frying Pan">
 			<property name="Tags" value="knife,melee,light,weapon,meleeWeapon,perkDeepCuts,perkTheHuntsman"/>
 			<property name="DisplayType" value="melee"/>
 			<property name="HoldType" value="47"/>
 			<property name="Meshfile" value="#@modfolder:Resources/FryingPan.unity3d?FryingPanPrefab"/>
+			<property name="DropScale" value="6"/>
 			<property name="Material" value="Mmetal"/>
-			<property name="CustomIcon" value="fryingpan"/>
+			<property name="CustomIcon" value="7fryingpan"/>
 			<property name="RepairTools" value="resourceScrapIron"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="EconomicValue" value="50"/>
@@ -1806,9 +2125,10 @@
 			<property name="Tags" value="knife,melee,light,weapon,meleeWeapon,perkDeepCuts,perkTheHuntsman"/>
 			<property name="HoldType" value="47"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Butcher.unity3d?ButcherPrefab"/>
+			<property name="DropScale" value="6"/>
 			<property name="DisplayType" value="melee"/>
 			<property name="HoldType" value="47"/>
-			<property name="CustomIcon" value="butcher"/>
+			<property name="CustomIcon" value="7butcher"/>
 			<property name="RepairTools" value="resourceScrapIron"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="ItemNeedsRepair"/>
@@ -1863,7 +2183,8 @@
 			<property name="Material" value="Mmetal"/>
 			<property name="HoldType" value="50"/>
 			<property name="Meshfile" value="#@modfolder:Resources/Scythe.unity3d?ScythePrefab"/>
-			<property name="CustomIcon" value="scythe"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7scythe"/>
 			<property name="RepairTools" value="resourceScrapIron"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="EconomicValue" value="50"/>
@@ -1919,7 +2240,8 @@
 			<property name="HoldType" value="3"/>
 			<property name="Meshfile" value="#@modfolder:Resources/USMC.unity3d?CrayonPrefab"/>
 			<property name="DropMeshfile" value="#@modfolder:Resources/USMC.unity3d?CrayonPrefab"/>
-			<property name="CustomIcon" value="crayon"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7crayon"/>
 			<property name="Material" value="Morganic"/>
 			<property name="Weight" value="1"/>
 			<property name="Stacknumber" value="5000"/>
@@ -1927,6 +2249,7 @@
 			<property name="Group" value="Oven"/>
 			<property name="CraftingIngredientExp" value="3"/>
 			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -1941,6 +2264,234 @@
 			</effect_group>
 		</item>		
 		
+		<item name="Canned Food">
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Can.unity3d?CanPrefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/Can.unity3d?CanPrefab"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7oldcan"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="5000"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="Group" value="Oven"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>	
+		
+		<item name="Chips">
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Chips.unity3d?ChipsPrefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/Chips.unity3d?ChipsPrefab"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7chips"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="5000"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="Group" value="Oven"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffStuffed"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>	
+		
+		<item name="Pancakes">
+			<property name="HoldType" value="23"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Pancake.unity3d?PancakePrefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/Pancake.unity3d?PancakePrefab"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7pancakes"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="5000"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="Group" value="Oven"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffRiseAndShine"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>	
+		
+		<item name="Donut">
+			<property name="HoldType" value="23"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Donut.unity3d?DonutPrefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/Donut.unity3d?DonutPrefab"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7donut"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="5000"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="Group" value="Oven"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffStuffed"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>	
+		
+		<item name="Cupcake">
+			<property name="HoldType" value="23"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Cupcake.unity3d?CupcakePrefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/Cupcake.unity3d?CupcakePrefab"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7cupcake"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="5000"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="Group" value="Oven"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffStuffed"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>	
+		
+		<item name="Soup">
+			<property name="HoldType" value="23"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Soup.unity3d?SoupPrefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/Soup.unity3d?SoupPrefab"/>
+			<property name="DropScale" value="6"/>
+			<property name="CustomIcon" value="7soup"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="5000"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="Group" value="Oven"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffStuffed"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>	
+		
+		<item name="Tonic">
+			<property name="HoldType" value="3"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="CustomIcon" value="7pepsi"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Pepsi.unity3d?PepsiPrefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/Pepsi.unity3d?PepsiPrefab"/>
+			<property name="DropScale" value="6"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Weight" value="10"/>
+			<property name="Stacknumber" value="15"/>
+			<property name="EconomicValue" value="25"/>
+			<property name="DisplayType" value="foodWater"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_drinking"/>
+				<property name="Create_item" value="drinkJarEmpty"/></property>
+			<effect_group tiered="false">
+				<requirement name="HasBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffExtinguishFire"/>
+			</effect_group>
+		</item>
+
+		<item name="BeefCake">
+			<property name="HoldType" value="3"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="CustomIcon" value="7beefcake"/>
+			<property name="Meshfile" value="#@modfolder:Resources/BeefCake.unity3d?BeefCakePrefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/BeefCake.unity3d?BeefCakePrefab"/>
+			<property name="DropScale" value="6"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Weight" value="10"/>
+			<property name="Stacknumber" value="15"/>
+			<property name="EconomicValue" value="25"/>
+			<property name="DisplayType" value="food"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_drinking"/>
+				<property name="Create_item" value="drinkJarEmpty"/></property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffBeefcake"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+		
+		<item name="Iceberg Lettuce">
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Iceberg.unity3d?IcebergPrefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/Iceberg.unity3d?IcebergPrefab"/>
+			<property name="CustomIcon" value="7iceberg"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="5000"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+		</item>
 <!--
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 									Quests: Removed so I don't fuck up your saved data when I update, because I most likely would if I left this tutorial quest in
@@ -1957,11 +2508,12 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -->
 	<set xpath="/items/item[@name='resourceFeather']/property[@name='Group' and @value='Resources']/@value">Resources,Food/Cooking,All</set>
+	<set xpath="/items/item[@name='foodEgg']/property[@name='Group' and @value='Food/Cooking']/@value">Food/Cooking,All</set>
 	
 	<append xpath="/items/item[@name='drinkJarEmpty']/property[@class='Action1']">
-		<property name="Focused_blockname_6" value="Well"/>
+		<property name="Focused_blockname_6" value="Old Stone Well"/>
 	</append>
 	<append xpath="/items/item[@name='bucketEmpty']/property[@class='Action1']">
-		<property name="Focused_blockname_6" value="Well"/>
+		<property name="Focused_blockname_6" value="Old Stone Well"/>
 	</append>
 </configs>

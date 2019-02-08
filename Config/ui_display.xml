@@ -42,11 +42,11 @@
 			<crafting_category name="Grain" icon="ui_game_symbol_coffee" display_name="Grain Processor" />
 		</crafting_category_list>
 		
-		<crafting_category_list display_type="Smoker">
+		<crafting_category_list display_type="Rustic Smoker">
 			<crafting_category name="Smoker" icon="ui_game_symbol_spatula" display_name="Smoker" icon_color="255,111,0" />
 		</crafting_category_list>
 		
-		<crafting_category_list display_type="Grill">
+		<crafting_category_list display_type="Webber Grill">
 			<crafting_category name="Oven" icon="ui_game_symbol_spatula" display_name="Grill" icon_color="255,111,0" />
 		</crafting_category_list>
 	</append>
