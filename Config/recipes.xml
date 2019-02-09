@@ -330,12 +330,12 @@
 			<ingredient name="Cheese" count="1"/>
 		</recipe>
 		
-		<recipe name="Bagel" count="1" craft_time="60" craft_area="Webber Grill" craft_tool="toolCookingPot">
+		<recipe name="Bagel" count="1" craft_time="60" craft_area="Oven" craft_tool="toolCookingPot">
 			<ingredient name="Dough" count="1"/>
 			<ingredient name="drinkJarRiverWater" count="1"/>
 		</recipe>
 		
-		<recipe name="Bread" count="1" craft_time="60" craft_area="Webber Grill">
+		<recipe name="Bread" count="1" craft_time="60" craft_area="Oven">
 			<ingredient name="Dough" count="1"/>
 			<ingredient name="Fresh Butter" count="1"/>
 		</recipe>
@@ -345,7 +345,7 @@
 			<ingredient name="drinkJarBoiledWater" count="1"/>
 		</recipe>
 		
-		<recipe name="GrandMa's Famous Sauce" count="60" craft_time="1" craft_area="Webber Grill">
+		<recipe name="GrandMa's Famous Sauce" count="60" craft_time="1" craft_area="Oven">
 			<ingredient name="Heirloom Tomatoes" count="1"/>
 			<ingredient name="Herbs" count="1"/>
 			<ingredient name="Raw Ground Beef" count="1"/>
@@ -390,7 +390,7 @@
 									Natural/Healthy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -->		
-		<recipe name="Dried Fruit" count="1" craft_time="120" craft_area="Webber Grill">
+		<recipe name="Dried Fruit" count="1" craft_time="120" craft_area="Oven">
 			<ingredient name="Vineyard Grapes" count="1"/>
 			<ingredient name="Strawberries" count="1"/>
 			<ingredient name="Red Apples" count="1"/>
@@ -410,7 +410,7 @@
 			<ingredient name="foodCropBlueberries" count="1"/>
 		</recipe>
 		
-		<recipe name="White Rice" count="1" craft_time="120" craft_area="Webber Grill" craft_tool="toolCookingPot">
+		<recipe name="White Rice" count="1" craft_time="120" craft_area="Oven" craft_tool="toolCookingPot">
 			<ingredient name="Rice" count="3"/>
 			<ingredient name="drinkJarRiverWater" count="1"/>
 		</recipe>	
@@ -427,7 +427,7 @@
 			<ingredient name="Fresh Butter" count="1"/>
 		</recipe>
 		
-		<recipe name="Fresh Bacon Meatloaf" count="1" craft_time="60" craft_area="Webber Grill">
+		<recipe name="Fresh Bacon Meatloaf" count="1" craft_time="60" craft_area="Oven">
 			<ingredient name="Raw Bacon" count="1"/>
 			<ingredient name="foodEgg" count="1"/>
 			<ingredient name="Herbs" count="1"/>
@@ -451,7 +451,7 @@
 			<ingredient name="Raw Sausage Link" count="1"/>
 		</recipe>
 		
-		<recipe name="Fresh Kobe Beef" count="1" craft_time="180" craft_area="Webber Grill">
+		<recipe name="Fresh Kobe Beef" count="1" craft_time="180" craft_area="Oven">
 			<ingredient name="Raw Kobe Beef" count="1"/>
 		</recipe>
 		
@@ -462,7 +462,7 @@
 			<ingredient name="Spices" count="1"/>
 		</recipe>
 		
-		<recipe name="Fresh Baked Chicken Breast" count="1" craft_time="15" craft_area="Webber Grill">
+		<recipe name="Fresh Baked Chicken Breast" count="1" craft_time="15" craft_area="Oven">
 			<ingredient name="Raw Chicken Breast" count="1"/>
 			<ingredient name="Herbs" count="1"/>
 			<ingredient name="Heirloom Tomatoes" count="1"/>
@@ -482,7 +482,7 @@
 			<ingredient name="Iceberg Lettuce" count="1"/>
 		</recipe>
 		
-		<recipe name="Breakfast Sausage Sandwich" count="1" craft_time="30" craft_area="Webber Grill" craft_tool="toolCookingGrill">
+		<recipe name="Breakfast Sausage Sandwich" count="1" craft_time="30" craft_area="Oven" craft_tool="toolCookingGrill">
 			<ingredient name="Raw Sausage Link" count="1"/>
 			<ingredient name="foodEgg" count="1"/>
 			<ingredient name="Bagel" count="1"/>
@@ -490,7 +490,7 @@
 			<ingredient name="Fresh Butter" count="1"/>
 		</recipe>
 		
-		<recipe name="Breakfast Bacon Sandwich" count="1" craft_time="30" craft_area="Webber Grill" craft_tool="toolCookingGrill">
+		<recipe name="Breakfast Bacon Sandwich" count="1" craft_time="30" craft_area="Oven" craft_tool="toolCookingGrill">
 			<ingredient name="Raw Bacon" count="1"/>
 			<ingredient name="foodEgg" count="1"/>
 			<ingredient name="Bagel" count="1"/>
@@ -520,7 +520,7 @@
 			<ingredient name="Sugar" count="5"/>
 		</recipe>
 		
-		<recipe name="Warm Apple Pie" count="1" craft_time="180" craft_area="Webber Grill">
+		<recipe name="Warm Apple Pie" count="1" craft_time="180" craft_area="Oven">
 			<ingredient name="Red Apples" count="1"/>
 			<ingredient name="drinkJarBoiledWater" count="1"/>
 			<ingredient name="Sugar" count="1"/>
@@ -528,7 +528,7 @@
 			<ingredient name="Fresh Butter" count="1"/>
 		</recipe>
 		
-		<recipe name="Cookie" count="1" craft_time="120" craft_area="Webber Grill">
+		<recipe name="Cookie" count="1" craft_time="120" craft_area="Oven">
 			<ingredient name="Dough" count="2"/>
 			<ingredient name="Fresh Butter" count="2"/>
 			<ingredient name="Sugar" count="5"/>
@@ -540,21 +540,21 @@
 									Dinners
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -->
-		<recipe name="Pizza" count="1" craft_time="45" craft_area="Webber Grill" craft_tool="toolCookingPot">
+		<recipe name="Pizza" count="1" craft_time="45" craft_area="Oven" craft_tool="toolCookingPot">
 			<ingredient name="Dough" count="1"/>
 			<ingredient name="GrandMa's Famous Sauce" count="1"/>
 			<ingredient name="Raw Sausage Link" count="1"/>
 			<ingredient name="Cheese" count="1"/>
 		</recipe>
 		
-		<recipe name="Fried Rice" count="1" craft_time="180" craft_area="Webber Grill">
+		<recipe name="Fried Rice" count="1" craft_time="180" craft_area="Oven">
 			<ingredient name="White Rice" count="3"/>
 			<ingredient name="Raw Chicken Breast" count="1"/>
 			<ingredient name="Raw Kobe Beef" count="1"/>
 			<ingredient name="Herbs" count="1"/>
 		</recipe>
 		
-		<recipe name="Pasta" count="1" craft_time="15" craft_area="Webber Grill" craft_tool="toolCookingPot">
+		<recipe name="Pasta" count="1" craft_time="15" craft_area="Oven" craft_tool="toolCookingPot">
 			<ingredient name="Raw Pasta" count="1"/>
 			<ingredient name="GrandMa's Famous Sauce" count="1"/>
 		</recipe>
@@ -602,28 +602,28 @@
 									EXP 1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -->		
-		<recipe name="Chips" count="1" craft_time="20" craft_area="Webber Grill">
+		<recipe name="Chips" count="1" craft_time="20" craft_area="Oven">
 			<ingredient name="foodCropPotato" count="2"/>
 			<ingredient name="Old Salt" count="1"/>
 		</recipe>
 		
-		<recipe name="Pancakes" count="1" craft_time="20" craft_area="Webber Grill">
+		<recipe name="Pancakes" count="1" craft_time="20" craft_area="Oven">
 			<ingredient name="Sugar" count="2"/>
 			<ingredient name="Flour" count="2"/>
 			<ingredient name="Fresh Milk" count="1"/>
 		</recipe>
 		
-		<recipe name="Donut" count="1" craft_time="20" craft_area="Webber Grill">
+		<recipe name="Donut" count="1" craft_time="20" craft_area="Oven">
 			<ingredient name="Sugar" count="5"/>
 			<ingredient name="Dough" count="1"/>
 		</recipe>
 		
-		<recipe name="Cupcake" count="1" craft_time="20" craft_area="Webber Grill">
+		<recipe name="Cupcake" count="1" craft_time="20" craft_area="Oven">
 			<ingredient name="Sugar" count="5"/>
 			<ingredient name="Dough" count="1"/>
 		</recipe>
 		
-		<recipe name="Soup" count="1" craft_time="60" craft_area="Webber Grill" craft_tool="toolCookingPot">
+		<recipe name="Soup" count="1" craft_time="60" craft_area="Oven" craft_tool="toolCookingPot">
 			<ingredient name="Herbs" count="5"/>
 			<ingredient name="drinkJarRiverWater" count="4"/>
 			<ingredient name="Spices" count="4"/>
