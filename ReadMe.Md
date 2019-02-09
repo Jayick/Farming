@@ -2,16 +2,19 @@
 ## Expansion 1.1:
 Change log:
 - Animals now fully animated and move around in small animation patterns
+
 Added:
 - Lettuce Crops
 - New food items (Chips, Cupcake, Donut, Tonic, Beefcake Workout Supplement, Soup, Canned Food, Pancakes)
 - 2 new Storage Containers (Barrel, and Wine Crate)
 - Updated block bounds on animals (cows=7x7, pigs=5x5, chickens=3x3)
+
 Fixed:
 - Fixed grapes being endless farming when first stage growth is damaged
 - Fixed XUi server side issues
 - Fixed name pathing to improve compatibility with FarmLife Mod (Thankyou Stasis!)
 - Fixed food and water displays
+
 Known Bugs:
 - Animals sync to same animation loop when loading world chunk/logging in. They're training for synchronized swimming in the Olympics, leave them alone.
 - Other mods may have conflicting name pathing. Might cause some assets to not appear/fail to load. Please contact w/name of mods running and which item is not working. I can not help if you provide vague answers or are running every single mod out there for download. Be selective with mods. Don't just spam click them all and expect it to work.
