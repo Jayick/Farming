@@ -178,7 +178,7 @@
 	
 <!-- Learning buffs -->
 
-	<buff name="buffSmartyPants" name_key="Smarty Pants!" description_key="Look how smart you are, nerd! +25% XP gain, +2 Craft Tier, +30% craft speed, +20% barter prices, -9 Carry Cap, -45% Damage Resistance." tooltip_key="Smarty Pants" icon="ui_game_symbol_book" icon_color="25,163,227" icon_blink="true" tags="drug">
+	<buff name="buffSmartyPants" name_key="Smarty Pants!" description_key="Look how smart you are, nerd! +25% XP gain, +2 Craft Tier, +30% craft speed, -9 Carry Cap, -45% Damage Resistance." tooltip_key="Smarty Pants" icon="ui_game_symbol_book" icon_color="25,163,227" icon_blink="true" tags="drug">
 		<stack_type value="replace"/>
 		<duration value="45"/>
 		<effect_group>
@@ -188,7 +188,6 @@
 			<passive_effect name="PlayerExpGain" operation="perc_add" value=".25" />
 			<passive_effect name="CraftingTier" operation="base_add" value="2"/>
 			<passive_effect name="CraftingTime" operation="perc_add" value="-.3"/>
-			<passive_effect name="Bartering" operation="perc_add" value=".2" />
 			<passive_effect name="CarryCapacity" operation="base_subtract" value="9" />
 			<passive_effect name="PhysicalDamageResist" operation="base_subtract" value="45" tags="coredamageresist"/>
 			<triggered_effect trigger="onOtherDamagedSelf" action="RemoveBuff" target="self" buff="buffSmartyPants"/>
@@ -196,7 +195,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="buffSmarty" name_key="Smarty!" description_key="+10% Xp gain, +1 Craft Tier, +10% Craft Speed, +10% Bartering Prices, -20% Damage Resistance." tooltip_key="Smarty" icon="ui_game_symbol_book" icon_color="25,163,227" tags="drug">
+	<buff name="buffSmarty" name_key="Smarty!" description_key="+10% Xp gain, +1 Craft Tier, +10% Craft Speed, -20% Damage Resistance." tooltip_key="Smarty" icon="ui_game_symbol_book" icon_color="25,163,227" tags="drug">
 		<stack_type value="replace"/>
 		<duration value="120"/>
 		<effect_group>
@@ -206,7 +205,6 @@
 			<passive_effect name="PlayerExpGain" operation="perc_add" value=".1" />
 			<passive_effect name="CraftingTier" operation="base_add" value="1"/>
 			<passive_effect name="CraftingTime" operation="perc_add" value="-.1"/>
-			<passive_effect name="Bartering" operation="perc_add" value=".1" />
 			<triggered_effect trigger="onOtherDamagedSelf" action="RemoveBuff" target="self" buff="buffSmarty"/>
 			<passive_effect name="PhysicalDamageResist" operation="base_subtract" value="20" tags="coredamageresist"/>
 		</effect_group>
