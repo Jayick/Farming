@@ -2159,7 +2159,7 @@
 				<passive_effect name="BlockDamage" operation="base_set" value="7"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="organic"/>
 				<passive_effect name="AttacksPerMinute" operation="base_set" value="70"/>
-				<passive_effect name="HarvestCount" operation="perc_add" value=".5" tags="butcherHarvest"/>
+				<passive_effect name="HarvestCount" operation="base_set" value="1" tags="butcherHarvest"/>
 				<passive_effect name="StaminaLoss" operation="base_set" value="18" tags="primary"/>
 				<passive_effect name="DegradationMax" operation="base_set" value="200,500" tier="1,6"/>
 				<passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
