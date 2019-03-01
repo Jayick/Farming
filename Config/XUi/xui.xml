@@ -1,0 +1,88 @@
+<configs>
+	<append xpath="/xui/ruleset" >
+
+		<window_group name="workstation_Farm Table" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		<window_group name="workstation_Dairy Churn" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		<window_group name="workstation_Wine Cask" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		<window_group name="workstation_Chicken Coop" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		<window_group name="workstation_Cow" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		<window_group name="workstation_Pig" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		<window_group name="workstation_Butcher Table" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		<window_group name="workstation_Grain Processor" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		<window_group name="workstation_Rustic Smoker" controller="XUiC_WorkstationWindowGroup">	
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="windowFuel" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		<window_group name="workstation_Webber Grill" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList"/>
+			<window name="windowToolsCampfire" />
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowFuel" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+	</append>
+</configs>
