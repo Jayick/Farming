@@ -2215,7 +2215,6 @@
 				<passive_effect name="EntityDamage" operation="base_set" value="2"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="10"/>
 				<passive_effect name="HarvestCount" operation="perc_add" value="1" tags="cropHarvest"/>
-				<passive_effect name="DismemberChance" operation="base_add" value=".25" tags="primary"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="wood"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="earth"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="stone"/>
