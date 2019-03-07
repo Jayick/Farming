@@ -1,6 +1,6 @@
 # Farming Expansion Modlet (A17 full release)
-## 17.2 Hotfix
-- Removed perk line from buff causing error in XML.
+## 17.2.1 Hotfix
+-Fixed Scythe being OP 
 ## Expansion 1.1:
 Change log:
 - Animals now fully animated and move around in small animation patterns
