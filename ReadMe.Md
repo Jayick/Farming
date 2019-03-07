@@ -1,7 +1,7 @@
 # Farming Expansion Modlet (A17 full release)
-## 17.2.1 Hotfix
+## 17.2 Hotfix
 -Fixed Scythe being OP 
-## Expansion 1.1:
+## Expansion 1.13:
 Change log:
 - Animals now fully animated and move around in small animation patterns
 
