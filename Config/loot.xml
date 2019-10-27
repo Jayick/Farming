@@ -1,5 +1,5 @@
 <configs>
-<insertBefore xpath="/lootcontainers/lootgroup[@name='questChallenge']">
+<insertBefore xpath="/lootcontainers/lootgroup[@name='groupQuestChallenge']">
 
 <lootgroup name="seedpack" count="all">
 		<item name="Seed Pack" count="1"/>
