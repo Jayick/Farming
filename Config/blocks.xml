@@ -42,9 +42,7 @@
 			<drop event="Harvest" name="Sugarcane Stalk" count="1" tag="cropHarvest"/>
 			<property name="DowngradeBlock" value="Sugar Seedling"/>
 		</block>
-		
-		
-		
+				
 		<!-- Wheat -->
 		<block name="Whole Wheat Seedling">
 			<property name="Extends" value="cropsGrowingMaster" />
@@ -82,9 +80,7 @@
 			<drop event="Harvest" name="Whole Wheat" count="1" tag="cropHarvest"/>
 			<property name="DowngradeBlock" value="Whole Wheat Seedling"/>
 		</block>
-		
-		
-		
+
 		<!-- Sunflower -->
 		<block name="Sunflower Seedling">
 			<property name="Extends" value="cropsGrowingMaster" />
@@ -123,8 +119,6 @@
 			<property name="DowngradeBlock" value="Sunflower Seedling"/>
 		</block>
 		
-		
-		
 		<!-- Pot -->
 		<block name="Marijuana Seedling">
 			<property name="Extends" value="cropsGrowingMaster" />
@@ -161,9 +155,7 @@
 			<property name="CreativeMode" value="Player"/>
 			<drop event="Harvest" name="Hemp" count="1" tag="cropHarvest"/>
 			<property name="DowngradeBlock" value="Marijuana Seedling"/>
-		</block>
-		
-		
+		</block>		
 		
 		<!-- Tomato -->
 		<block name="Heirloom Tomato Seedling">
@@ -1374,7 +1366,7 @@
 		</block>
 	</append>
 	
-	<append xpath="/blocks/block[@name='terrFertileFarmland']">
+	<append xpath="/blocks/block[@name='terrFertileDirt']">
 		<property class="UpgradeBlock">
 				<property name="ToBlock" value="Fertile Animal Ground"/>
 				<property name="Item" value="Pitchfork"/>
